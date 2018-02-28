@@ -20,9 +20,9 @@
         "id": 1
     },
     {
-        "name": "Board",
+        "name": "Graveyard",
         "owner": "Player",
-        "type": "Dynamic",
+        "type": "Static",
         "ownerVisibility": "Visible",
         "opponentVisibility": "Visible",
         "hasMaxSize": false,
@@ -30,9 +30,9 @@
         "id": 2
     },
     {
-        "name": "Graveyard",
+        "name": "Board",
         "owner": "Player",
-        "type": "Static",
+        "type": "Dynamic",
         "ownerVisibility": "Visible",
         "opponentVisibility": "Visible",
         "hasMaxSize": false,

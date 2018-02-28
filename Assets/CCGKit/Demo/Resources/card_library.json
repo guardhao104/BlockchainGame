@@ -1,30 +1,30 @@
 [
     {
-        "name": "Set 1",
+        "name": "Develop",
         "cards": [
             {
-                "cardTypeId": 0,
-                "name": "Swamp Snake",
+                "cardTypeId": 1,
+                "name": "ARCHER",
                 "costs": [
                     {
-                        "statId": 1,
+                        "statId": 5,
                         "value": 1,
                         "$type": "CCGKit.PayResourceCost"
                     }
                 ],
                 "properties": [
                     {
-                        "value": "<b>Impetus</b>. Deal 1 damage to target enemy creature.",
+                        "value": "ATTACK 2",
                         "name": "Text",
                         "$type": "CCGKit.StringProperty"
                     },
                     {
-                        "value": "Creature",
+                        "value": "Spell",
                         "name": "Picture",
                         "$type": "CCGKit.StringProperty"
                     },
                     {
-                        "value": 4,
+                        "value": 3,
                         "name": "MaxCopies",
                         "$type": "CCGKit.IntProperty"
                     },
@@ -34,54 +34,28 @@
                         "$type": "CCGKit.StringProperty"
                     }
                 ],
-                "stats": [
-                    {
-                        "baseValue": 1,
-                        "statId": 0,
-                        "name": "Attack",
-                        "originalValue": 1,
-                        "minValue": 0,
-                        "maxValue": 99,
-                        "modifiers": []
-                    },
-                    {
-                        "baseValue": 1,
-                        "statId": 1,
-                        "name": "Life",
-                        "originalValue": 1,
-                        "minValue": 0,
-                        "maxValue": 99,
-                        "modifiers": []
-                    }
-                ],
-                "keywords": [
-                    {
-                        "keywordId": 0,
-                        "valueId": 0
-                    }
-                ],
+                "stats": [],
+                "keywords": [],
                 "abilities": [
                     {
                         "trigger": {
-                            "zoneId": 2,
-                            "$type": "CCGKit.OnCardEnteredZoneTrigger"
+                            "statId": 0,
+                            "$type": "CCGKit.OnPlayerStatDecreasedTrigger"
                         },
-                        "name": "Deal 1 damage",
+                        "name": "-2",
                         "type": "Triggered",
                         "effect": {
+                            "statId": 8,
                             "value": {
-                                "constant": 1,
+                                "constant": 2,
                                 "$type": "CCGKit.ConstantValue"
                             },
                             "duration": 0,
-                            "statId": 1,
-                            "gameZoneId": 2,
-                            "cardTypeId": 0,
-                            "$type": "CCGKit.DecreaseCardStatEffect"
+                            "$type": "CCGKit.DecreasePlayerStatEffect"
                         },
                         "target": {
                             "conditions": [],
-                            "$type": "CCGKit.OpponentCard"
+                            "$type": "CCGKit.TargetPlayer"
                         },
                         "$type": "CCGKit.TriggeredAbility"
                     }
@@ -89,84 +63,28 @@
                 "id": 0
             },
             {
-                "cardTypeId": 0,
-                "name": "Wild Bear",
+                "cardTypeId": 1,
+                "name": "ARCHER",
                 "costs": [
                     {
-                        "statId": 1,
-                        "value": 2,
+                        "statId": 5,
+                        "value": 1,
                         "$type": "CCGKit.PayResourceCost"
                     }
                 ],
                 "properties": [
                     {
-                        "value": "",
+                        "value": "ATTACK 2",
                         "name": "Text",
                         "$type": "CCGKit.StringProperty"
                     },
                     {
-                        "value": "Creature",
+                        "value": "Spell",
                         "name": "Picture",
                         "$type": "CCGKit.StringProperty"
                     },
                     {
-                        "value": 4,
-                        "name": "MaxCopies",
-                        "$type": "CCGKit.IntProperty"
-                    },
-                    {
-                        "value": null,
-                        "name": "Material",
-                        "$type": "CCGKit.StringProperty"
-                    }
-                ],
-                "stats": [
-                    {
-                        "baseValue": 2,
-                        "statId": 0,
-                        "name": "Attack",
-                        "originalValue": 2,
-                        "minValue": 0,
-                        "maxValue": 99,
-                        "modifiers": []
-                    },
-                    {
-                        "baseValue": 3,
-                        "statId": 1,
-                        "name": "Life",
-                        "originalValue": 3,
-                        "minValue": 0,
-                        "maxValue": 99,
-                        "modifiers": []
-                    }
-                ],
-                "keywords": [],
-                "abilities": [],
-                "id": 1
-            },
-            {
-                "cardTypeId": 0,
-                "name": "Valorous Captain",
-                "costs": [
-                    {
-                        "statId": 1,
                         "value": 3,
-                        "$type": "CCGKit.PayResourceCost"
-                    }
-                ],
-                "properties": [
-                    {
-                        "value": "When this creature enters the board, all your creatures gain 1 attack until end of turn.",
-                        "name": "Text",
-                        "$type": "CCGKit.StringProperty"
-                    },
-                    {
-                        "value": "Creature",
-                        "name": "Picture",
-                        "$type": "CCGKit.StringProperty"
-                    },
-                    {
-                        "value": 4,
                         "name": "MaxCopies",
                         "$type": "CCGKit.IntProperty"
                     },
@@ -176,49 +94,88 @@
                         "$type": "CCGKit.StringProperty"
                     }
                 ],
-                "stats": [
-                    {
-                        "baseValue": 2,
-                        "statId": 0,
-                        "name": "Attack",
-                        "originalValue": 2,
-                        "minValue": 0,
-                        "maxValue": 99,
-                        "modifiers": []
-                    },
-                    {
-                        "baseValue": 2,
-                        "statId": 1,
-                        "name": "Life",
-                        "originalValue": 2,
-                        "minValue": 0,
-                        "maxValue": 99,
-                        "modifiers": []
-                    }
-                ],
+                "stats": [],
                 "keywords": [],
                 "abilities": [
                     {
                         "trigger": {
-                            "zoneId": 2,
-                            "$type": "CCGKit.OnCardEnteredZoneTrigger"
+                            "statId": 0,
+                            "$type": "CCGKit.OnPlayerStatDecreasedTrigger"
                         },
-                        "name": "Add +1 attack",
+                        "name": "-2",
                         "type": "Triggered",
                         "effect": {
+                            "statId": 8,
                             "value": {
-                                "constant": 1,
+                                "constant": 2,
                                 "$type": "CCGKit.ConstantValue"
                             },
-                            "duration": 1,
-                            "statId": 0,
-                            "gameZoneId": 2,
-                            "cardTypeId": 0,
-                            "$type": "CCGKit.IncreaseCardStatEffect"
+                            "duration": 0,
+                            "$type": "CCGKit.DecreasePlayerStatEffect"
                         },
                         "target": {
                             "conditions": [],
-                            "$type": "CCGKit.AllPlayerCards"
+                            "$type": "CCGKit.TargetPlayer"
+                        },
+                        "$type": "CCGKit.TriggeredAbility"
+                    }
+                ],
+                "id": 1
+            },
+            {
+                "cardTypeId": 1,
+                "name": "ARCHER",
+                "costs": [
+                    {
+                        "statId": 5,
+                        "value": 1,
+                        "$type": "CCGKit.PayResourceCost"
+                    }
+                ],
+                "properties": [
+                    {
+                        "value": "ATTACK 2",
+                        "name": "Text",
+                        "$type": "CCGKit.StringProperty"
+                    },
+                    {
+                        "value": "Spell",
+                        "name": "Picture",
+                        "$type": "CCGKit.StringProperty"
+                    },
+                    {
+                        "value": 3,
+                        "name": "MaxCopies",
+                        "$type": "CCGKit.IntProperty"
+                    },
+                    {
+                        "value": null,
+                        "name": "Material",
+                        "$type": "CCGKit.StringProperty"
+                    }
+                ],
+                "stats": [],
+                "keywords": [],
+                "abilities": [
+                    {
+                        "trigger": {
+                            "statId": 0,
+                            "$type": "CCGKit.OnPlayerStatDecreasedTrigger"
+                        },
+                        "name": "-2",
+                        "type": "Triggered",
+                        "effect": {
+                            "statId": 8,
+                            "value": {
+                                "constant": 2,
+                                "$type": "CCGKit.ConstantValue"
+                            },
+                            "duration": 0,
+                            "$type": "CCGKit.DecreasePlayerStatEffect"
+                        },
+                        "target": {
+                            "conditions": [],
+                            "$type": "CCGKit.TargetPlayer"
                         },
                         "$type": "CCGKit.TriggeredAbility"
                     }
@@ -226,130 +183,18 @@
                 "id": 2
             },
             {
-                "cardTypeId": 0,
-                "name": "Iron Golem",
-                "costs": [
-                    {
-                        "statId": 1,
-                        "value": 4,
-                        "$type": "CCGKit.PayResourceCost"
-                    }
-                ],
-                "properties": [
-                    {
-                        "value": "",
-                        "name": "Text",
-                        "$type": "CCGKit.StringProperty"
-                    },
-                    {
-                        "value": "Creature",
-                        "name": "Picture",
-                        "$type": "CCGKit.StringProperty"
-                    },
-                    {
-                        "value": 4,
-                        "name": "MaxCopies",
-                        "$type": "CCGKit.IntProperty"
-                    },
-                    {
-                        "value": null,
-                        "name": "Material",
-                        "$type": "CCGKit.StringProperty"
-                    }
-                ],
-                "stats": [
-                    {
-                        "baseValue": 4,
-                        "statId": 0,
-                        "name": "Attack",
-                        "originalValue": 4,
-                        "minValue": 0,
-                        "maxValue": 99,
-                        "modifiers": []
-                    },
-                    {
-                        "baseValue": 5,
-                        "statId": 1,
-                        "name": "Life",
-                        "originalValue": 5,
-                        "minValue": 0,
-                        "maxValue": 99,
-                        "modifiers": []
-                    }
-                ],
-                "keywords": [],
-                "abilities": [],
-                "id": 3
-            },
-            {
-                "cardTypeId": 0,
-                "name": "Raging Dragon",
-                "costs": [
-                    {
-                        "statId": 1,
-                        "value": 6,
-                        "$type": "CCGKit.PayResourceCost"
-                    }
-                ],
-                "properties": [
-                    {
-                        "value": "",
-                        "name": "Text",
-                        "$type": "CCGKit.StringProperty"
-                    },
-                    {
-                        "value": "Creature",
-                        "name": "Picture",
-                        "$type": "CCGKit.StringProperty"
-                    },
-                    {
-                        "value": 4,
-                        "name": "MaxCopies",
-                        "$type": "CCGKit.IntProperty"
-                    },
-                    {
-                        "value": null,
-                        "name": "Material",
-                        "$type": "CCGKit.StringProperty"
-                    }
-                ],
-                "stats": [
-                    {
-                        "baseValue": 6,
-                        "statId": 0,
-                        "name": "Attack",
-                        "originalValue": 6,
-                        "minValue": 0,
-                        "maxValue": 99,
-                        "modifiers": []
-                    },
-                    {
-                        "baseValue": 7,
-                        "statId": 1,
-                        "name": "Life",
-                        "originalValue": 7,
-                        "minValue": 0,
-                        "maxValue": 99,
-                        "modifiers": []
-                    }
-                ],
-                "keywords": [],
-                "abilities": [],
-                "id": 4
-            },
-            {
                 "cardTypeId": 1,
-                "name": "Divine Touch",
+                "name": "ARCHER",
                 "costs": [
                     {
-                        "statId": 1,
-                        "value": 4,
+                        "statId": 5,
+                        "value": 1,
                         "$type": "CCGKit.PayResourceCost"
                     }
                 ],
                 "properties": [
                     {
-                        "value": "You gain 8 life.",
+                        "value": "ATTACK 2",
                         "name": "Text",
                         "$type": "CCGKit.StringProperty"
                     },
@@ -359,7 +204,7 @@
                         "$type": "CCGKit.StringProperty"
                     },
                     {
-                        "value": 4,
+                        "value": 3,
                         "name": "MaxCopies",
                         "$type": "CCGKit.IntProperty"
                     },
@@ -374,42 +219,42 @@
                 "abilities": [
                     {
                         "trigger": {
-                            "zoneId": 2,
-                            "$type": "CCGKit.OnCardEnteredZoneTrigger"
+                            "statId": 0,
+                            "$type": "CCGKit.OnPlayerStatDecreasedTrigger"
                         },
-                        "name": "Gain 8 life",
+                        "name": "-2",
                         "type": "Triggered",
                         "effect": {
-                            "statId": 0,
+                            "statId": 8,
                             "value": {
-                                "constant": 8,
+                                "constant": 2,
                                 "$type": "CCGKit.ConstantValue"
                             },
                             "duration": 0,
-                            "$type": "CCGKit.IncreasePlayerStatEffect"
+                            "$type": "CCGKit.DecreasePlayerStatEffect"
                         },
                         "target": {
                             "conditions": [],
-                            "$type": "CCGKit.PlayerTarget"
+                            "$type": "CCGKit.TargetPlayer"
                         },
                         "$type": "CCGKit.TriggeredAbility"
                     }
                 ],
-                "id": 5
+                "id": 3
             },
             {
                 "cardTypeId": 1,
-                "name": "Explosion",
+                "name": "ARCHER",
                 "costs": [
                     {
-                        "statId": 1,
-                        "value": 2,
+                        "statId": 5,
+                        "value": 1,
                         "$type": "CCGKit.PayResourceCost"
                     }
                 ],
                 "properties": [
                     {
-                        "value": "Deal 1 damage to all enemy creatures.",
+                        "value": "ATTACK 2",
                         "name": "Text",
                         "$type": "CCGKit.StringProperty"
                     },
@@ -419,7 +264,7 @@
                         "$type": "CCGKit.StringProperty"
                     },
                     {
-                        "value": 4,
+                        "value": 3,
                         "name": "MaxCopies",
                         "$type": "CCGKit.IntProperty"
                     },
@@ -434,25 +279,83 @@
                 "abilities": [
                     {
                         "trigger": {
-                            "zoneId": 2,
-                            "$type": "CCGKit.OnCardEnteredZoneTrigger"
+                            "statId": 0,
+                            "$type": "CCGKit.OnPlayerStatDecreasedTrigger"
                         },
-                        "name": "Deal 1 damage",
+                        "name": "-2",
                         "type": "Triggered",
                         "effect": {
+                            "statId": 8,
                             "value": {
-                                "constant": 1,
+                                "constant": 2,
                                 "$type": "CCGKit.ConstantValue"
                             },
                             "duration": 0,
-                            "statId": 1,
-                            "gameZoneId": 2,
-                            "cardTypeId": 0,
-                            "$type": "CCGKit.DecreaseCardStatEffect"
+                            "$type": "CCGKit.DecreasePlayerStatEffect"
                         },
                         "target": {
                             "conditions": [],
-                            "$type": "CCGKit.AllOpponentCards"
+                            "$type": "CCGKit.TargetPlayer"
+                        },
+                        "$type": "CCGKit.TriggeredAbility"
+                    }
+                ],
+                "id": 4
+            },
+            {
+                "cardTypeId": 1,
+                "name": "ARCHER",
+                "costs": [
+                    {
+                        "statId": 5,
+                        "value": 1,
+                        "$type": "CCGKit.PayResourceCost"
+                    }
+                ],
+                "properties": [
+                    {
+                        "value": "ATTACK 2",
+                        "name": "Text",
+                        "$type": "CCGKit.StringProperty"
+                    },
+                    {
+                        "value": "Spell",
+                        "name": "Picture",
+                        "$type": "CCGKit.StringProperty"
+                    },
+                    {
+                        "value": 3,
+                        "name": "MaxCopies",
+                        "$type": "CCGKit.IntProperty"
+                    },
+                    {
+                        "value": null,
+                        "name": "Material",
+                        "$type": "CCGKit.StringProperty"
+                    }
+                ],
+                "stats": [],
+                "keywords": [],
+                "abilities": [
+                    {
+                        "trigger": {
+                            "statId": 0,
+                            "$type": "CCGKit.OnPlayerStatDecreasedTrigger"
+                        },
+                        "name": "-2",
+                        "type": "Triggered",
+                        "effect": {
+                            "statId": 8,
+                            "value": {
+                                "constant": 2,
+                                "$type": "CCGKit.ConstantValue"
+                            },
+                            "duration": 0,
+                            "$type": "CCGKit.DecreasePlayerStatEffect"
+                        },
+                        "target": {
+                            "conditions": [],
+                            "$type": "CCGKit.TargetPlayer"
                         },
                         "$type": "CCGKit.TriggeredAbility"
                     }
@@ -461,17 +364,17 @@
             },
             {
                 "cardTypeId": 1,
-                "name": "Combat Rage",
+                "name": "ARCHER",
                 "costs": [
                     {
-                        "statId": 1,
+                        "statId": 5,
                         "value": 1,
                         "$type": "CCGKit.PayResourceCost"
                     }
                 ],
                 "properties": [
                     {
-                        "value": "Target creature you control gains +3/+0 until end of turn.",
+                        "value": "ATTACK 2",
                         "name": "Text",
                         "$type": "CCGKit.StringProperty"
                     },
@@ -481,7 +384,7 @@
                         "$type": "CCGKit.StringProperty"
                     },
                     {
-                        "value": 4,
+                        "value": 3,
                         "name": "MaxCopies",
                         "$type": "CCGKit.IntProperty"
                     },
@@ -496,25 +399,83 @@
                 "abilities": [
                     {
                         "trigger": {
-                            "zoneId": 2,
-                            "$type": "CCGKit.OnCardEnteredZoneTrigger"
+                            "statId": 0,
+                            "$type": "CCGKit.OnPlayerStatDecreasedTrigger"
                         },
-                        "name": "+3 attack",
+                        "name": "-2",
                         "type": "Triggered",
                         "effect": {
+                            "statId": 8,
                             "value": {
-                                "constant": 3,
+                                "constant": 2,
                                 "$type": "CCGKit.ConstantValue"
                             },
-                            "duration": 1,
-                            "statId": 0,
-                            "gameZoneId": 2,
-                            "cardTypeId": 0,
-                            "$type": "CCGKit.IncreaseCardStatEffect"
+                            "duration": 0,
+                            "$type": "CCGKit.DecreasePlayerStatEffect"
                         },
                         "target": {
                             "conditions": [],
-                            "$type": "CCGKit.PlayerCard"
+                            "$type": "CCGKit.TargetPlayer"
+                        },
+                        "$type": "CCGKit.TriggeredAbility"
+                    }
+                ],
+                "id": 5
+            },
+            {
+                "cardTypeId": 1,
+                "name": "ARCHER",
+                "costs": [
+                    {
+                        "statId": 5,
+                        "value": 1,
+                        "$type": "CCGKit.PayResourceCost"
+                    }
+                ],
+                "properties": [
+                    {
+                        "value": "ATTACK 2",
+                        "name": "Text",
+                        "$type": "CCGKit.StringProperty"
+                    },
+                    {
+                        "value": "Spell",
+                        "name": "Picture",
+                        "$type": "CCGKit.StringProperty"
+                    },
+                    {
+                        "value": 3,
+                        "name": "MaxCopies",
+                        "$type": "CCGKit.IntProperty"
+                    },
+                    {
+                        "value": null,
+                        "name": "Material",
+                        "$type": "CCGKit.StringProperty"
+                    }
+                ],
+                "stats": [],
+                "keywords": [],
+                "abilities": [
+                    {
+                        "trigger": {
+                            "statId": 0,
+                            "$type": "CCGKit.OnPlayerStatDecreasedTrigger"
+                        },
+                        "name": "-2",
+                        "type": "Triggered",
+                        "effect": {
+                            "statId": 8,
+                            "value": {
+                                "constant": 2,
+                                "$type": "CCGKit.ConstantValue"
+                            },
+                            "duration": 0,
+                            "$type": "CCGKit.DecreasePlayerStatEffect"
+                        },
+                        "target": {
+                            "conditions": [],
+                            "$type": "CCGKit.TargetPlayer"
                         },
                         "$type": "CCGKit.TriggeredAbility"
                     }
@@ -523,17 +484,17 @@
             },
             {
                 "cardTypeId": 1,
-                "name": "Mana Growth",
+                "name": "ARCHER",
                 "costs": [
                     {
-                        "statId": 1,
-                        "value": 0,
+                        "statId": 5,
+                        "value": 1,
                         "$type": "CCGKit.PayResourceCost"
                     }
                 ],
                 "properties": [
                     {
-                        "value": "Add 1 mana to your mana pool.",
+                        "value": "ATTACK 2",
                         "name": "Text",
                         "$type": "CCGKit.StringProperty"
                     },
@@ -543,7 +504,7 @@
                         "$type": "CCGKit.StringProperty"
                     },
                     {
-                        "value": 4,
+                        "value": 3,
                         "name": "MaxCopies",
                         "$type": "CCGKit.IntProperty"
                     },
@@ -558,23 +519,23 @@
                 "abilities": [
                     {
                         "trigger": {
-                            "zoneId": 2,
-                            "$type": "CCGKit.OnCardEnteredZoneTrigger"
+                            "statId": 0,
+                            "$type": "CCGKit.OnPlayerStatDecreasedTrigger"
                         },
-                        "name": "+1 mana",
+                        "name": "-2",
                         "type": "Triggered",
                         "effect": {
-                            "statId": 1,
+                            "statId": 8,
                             "value": {
-                                "constant": 1,
+                                "constant": 2,
                                 "$type": "CCGKit.ConstantValue"
                             },
-                            "duration": 1,
-                            "$type": "CCGKit.IncreasePlayerStatEffect"
+                            "duration": 0,
+                            "$type": "CCGKit.DecreasePlayerStatEffect"
                         },
                         "target": {
                             "conditions": [],
-                            "$type": "CCGKit.PlayerTarget"
+                            "$type": "CCGKit.TargetPlayer"
                         },
                         "$type": "CCGKit.TriggeredAbility"
                     }
@@ -583,17 +544,17 @@
             },
             {
                 "cardTypeId": 1,
-                "name": "Terror",
+                "name": "ARCHER",
                 "costs": [
                     {
-                        "statId": 1,
-                        "value": 2,
+                        "statId": 5,
+                        "value": 1,
                         "$type": "CCGKit.PayResourceCost"
                     }
                 ],
                 "properties": [
                     {
-                        "value": "Destroy target creature.",
+                        "value": "ATTACK 2",
                         "name": "Text",
                         "$type": "CCGKit.StringProperty"
                     },
@@ -603,7 +564,7 @@
                         "$type": "CCGKit.StringProperty"
                     },
                     {
-                        "value": 4,
+                        "value": 3,
                         "name": "MaxCopies",
                         "$type": "CCGKit.IntProperty"
                     },
@@ -618,101 +579,15 @@
                 "abilities": [
                     {
                         "trigger": {
-                            "zoneId": 2,
-                            "$type": "CCGKit.OnCardEnteredZoneTrigger"
-                        },
-                        "name": "Destroy creature",
-                        "type": "Triggered",
-                        "effect": {
-                            "value": {
-                                "constant": 0,
-                                "$type": "CCGKit.ConstantValue"
-                            },
-                            "duration": 0,
-                            "statId": 1,
-                            "gameZoneId": 2,
-                            "cardTypeId": 0,
-                            "$type": "CCGKit.SetCardStatEffect"
-                        },
-                        "target": {
-                            "conditions": [],
-                            "$type": "CCGKit.TargetCard"
-                        },
-                        "$type": "CCGKit.TriggeredAbility"
-                    }
-                ],
-                "id": 9
-            }
-        ]
-    },
-    {
-        "name": "Set 2",
-        "cards": [
-            {
-                "cardTypeId": 0,
-                "name": "Vengeful Vampire",
-                "costs": [
-                    {
-                        "statId": 1,
-                        "value": 2,
-                        "$type": "CCGKit.PayResourceCost"
-                    }
-                ],
-                "properties": [
-                    {
-                        "value": "When this creature dies, it deals 1 damage to enemy player.",
-                        "name": "Text",
-                        "$type": "CCGKit.StringProperty"
-                    },
-                    {
-                        "value": "Creature",
-                        "name": "Picture",
-                        "$type": "CCGKit.StringProperty"
-                    },
-                    {
-                        "value": 4,
-                        "name": "MaxCopies",
-                        "$type": "CCGKit.IntProperty"
-                    },
-                    {
-                        "value": null,
-                        "name": "Material",
-                        "$type": "CCGKit.StringProperty"
-                    }
-                ],
-                "stats": [
-                    {
-                        "baseValue": 1,
-                        "statId": 0,
-                        "name": "Attack",
-                        "originalValue": 1,
-                        "minValue": 0,
-                        "maxValue": 99,
-                        "modifiers": []
-                    },
-                    {
-                        "baseValue": 3,
-                        "statId": 1,
-                        "name": "Life",
-                        "originalValue": 3,
-                        "minValue": 0,
-                        "maxValue": 99,
-                        "modifiers": []
-                    }
-                ],
-                "keywords": [],
-                "abilities": [
-                    {
-                        "trigger": {
-                            "zoneId": 3,
-                            "$type": "CCGKit.OnCardEnteredZoneTrigger"
-                        },
-                        "name": "Deal 1 damage to player",
-                        "type": "Triggered",
-                        "effect": {
                             "statId": 0,
+                            "$type": "CCGKit.OnPlayerStatDecreasedTrigger"
+                        },
+                        "name": "-2",
+                        "type": "Triggered",
+                        "effect": {
+                            "statId": 8,
                             "value": {
-                                "constant": 1,
+                                "constant": 2,
                                 "$type": "CCGKit.ConstantValue"
                             },
                             "duration": 0,
@@ -720,36 +595,36 @@
                         },
                         "target": {
                             "conditions": [],
-                            "$type": "CCGKit.OpponentTarget"
+                            "$type": "CCGKit.TargetPlayer"
                         },
                         "$type": "CCGKit.TriggeredAbility"
                     }
                 ],
-                "id": 10
+                "id": 9
             },
             {
-                "cardTypeId": 0,
-                "name": "Elvish Healer",
+                "cardTypeId": 1,
+                "name": "ARCHER",
                 "costs": [
                     {
-                        "statId": 1,
+                        "statId": 5,
                         "value": 1,
                         "$type": "CCGKit.PayResourceCost"
                     }
                 ],
                 "properties": [
                     {
-                        "value": "<b>Provoke</b>. When this creature enters the board, it adds a +0/+1 counter to all your creatures.",
+                        "value": "ATTACK 2",
                         "name": "Text",
                         "$type": "CCGKit.StringProperty"
                     },
                     {
-                        "value": "Creature",
+                        "value": "Spell",
                         "name": "Picture",
                         "$type": "CCGKit.StringProperty"
                     },
                     {
-                        "value": 4,
+                        "value": 3,
                         "name": "MaxCopies",
                         "$type": "CCGKit.IntProperty"
                     },
@@ -759,59 +634,33 @@
                         "$type": "CCGKit.StringProperty"
                     }
                 ],
-                "stats": [
-                    {
-                        "baseValue": 1,
-                        "statId": 0,
-                        "name": "Attack",
-                        "originalValue": 1,
-                        "minValue": 0,
-                        "maxValue": 99,
-                        "modifiers": []
-                    },
-                    {
-                        "baseValue": 1,
-                        "statId": 1,
-                        "name": "Life",
-                        "originalValue": 1,
-                        "minValue": 0,
-                        "maxValue": 99,
-                        "modifiers": []
-                    }
-                ],
-                "keywords": [
-                    {
-                        "keywordId": 0,
-                        "valueId": 1
-                    }
-                ],
+                "stats": [],
+                "keywords": [],
                 "abilities": [
                     {
                         "trigger": {
-                            "zoneId": 2,
-                            "$type": "CCGKit.OnCardEnteredZoneTrigger"
+                            "statId": 0,
+                            "$type": "CCGKit.OnPlayerStatDecreasedTrigger"
                         },
-                        "name": "Heal 1 damage",
+                        "name": "-2",
                         "type": "Triggered",
                         "effect": {
+                            "statId": 8,
                             "value": {
-                                "constant": 1,
+                                "constant": 2,
                                 "$type": "CCGKit.ConstantValue"
                             },
                             "duration": 0,
-                            "statId": 1,
-                            "gameZoneId": 2,
-                            "cardTypeId": 0,
-                            "$type": "CCGKit.IncreaseCardStatEffect"
+                            "$type": "CCGKit.DecreasePlayerStatEffect"
                         },
                         "target": {
                             "conditions": [],
-                            "$type": "CCGKit.AllPlayerCards"
+                            "$type": "CCGKit.TargetPlayer"
                         },
                         "$type": "CCGKit.TriggeredAbility"
                     }
                 ],
-                "id": 11
+                "id": 10
             }
         ]
     }

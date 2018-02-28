@@ -1,7 +1,7 @@
 {
     "turnDuration": 30,
-    "minDeckSize": 25,
-    "maxDeckSize": 35,
+    "minDeckSize": 30,
+    "maxDeckSize": 60,
     "gameStartActions": [
         {
             "zoneId": 0,
@@ -12,7 +12,7 @@
         {
             "originZoneId": 0,
             "destinationZoneId": 1,
-            "numCards": 5,
+            "numCards": 8,
             "name": "Move cards",
             "target": "AllPlayers",
             "$type": "CCGKit.MoveCardsAction"
@@ -20,14 +20,37 @@
     ],
     "turnStartActions": [
         {
-            "statId": 1,
+            "statId": 3,
             "value": {
-                "$type": "CCGKit.TurnNumberValue"
+                "statId": 2,
+                "$type": "CCGKit.PlayerStatValue"
             },
-            "name": "Set player stat",
+            "name": "Increase player stat",
             "target": "CurrentPlayer",
-            "$type": "CCGKit.SetPlayerStatAction"
+            "$type": "CCGKit.IncreasePlayerStatAction"
         },
+        {
+            "statId": 5,
+            "value": {
+                "statId": 4,
+                "$type": "CCGKit.PlayerStatValue"
+            },
+            "name": "Increase player stat",
+            "target": "CurrentPlayer",
+            "$type": "CCGKit.IncreasePlayerStatAction"
+        },
+        {
+            "statId": 7,
+            "value": {
+                "statId": 6,
+                "$type": "CCGKit.PlayerStatValue"
+            },
+            "name": "Increase player stat",
+            "target": "CurrentPlayer",
+            "$type": "CCGKit.IncreasePlayerStatAction"
+        }
+    ],
+    "turnEndActions": [
         {
             "originZoneId": 0,
             "destinationZoneId": 1,
@@ -37,7 +60,6 @@
             "$type": "CCGKit.MoveCardsAction"
         }
     ],
-    "turnEndActions": [],
     "endGameConditions": [
         {
             "statId": 0,
@@ -52,6 +74,13 @@
             "value": 0,
             "type": "Loss",
             "$type": "CCGKit.CardsInZoneEndGameCondition"
+        },
+        {
+            "statId": 0,
+            "op": "GreaterThanOrEqualTo",
+            "value": 100,
+            "type": "Win",
+            "$type": "CCGKit.PlayerStatEndGameCondition"
         }
     ]
 }
