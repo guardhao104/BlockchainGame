@@ -239,13 +239,12 @@ public class DemoHumanPlayer : DemoPlayer
             gameUI.SetPlayerCrystals(crystalsStat.effectiveValue);
             UpdateHandCardsHighlight();
         };   
-        /*
+        
         genhpStat.onValueChanged += (oldValue, newValue) =>
         {
-            var change = oldValue - newValue;
-            var def = defenseStat.baseValue;
-            var cas = castleStat.baseValue;
-            gameUI.SetPlayerGenhp(genhpStat.effectiveValue);
+            int change = oldValue - newValue;
+            int def = defenseStat.baseValue;
+            int cas = castleStat.baseValue;
             if (def >= change)
             {
                 defenseStat.baseValue -= change;
@@ -260,7 +259,7 @@ public class DemoHumanPlayer : DemoPlayer
                 castleStat.baseValue -= change;
             }
         };
-        */
+        
         
         opponentCastleStat.onValueChanged += (oldValue, newValue) =>
         {
@@ -294,13 +293,12 @@ public class DemoHumanPlayer : DemoPlayer
         {
             gameUI.SetOpponentCrystals(opponentCrystalsStat.effectiveValue);
         };
-        /*
+        
         opponentGenhpStat.onValueChanged += (oldValue, newValue) =>
         {
-            var change = oldValue - newValue;
-            var def = opponentDefenseStat.baseValue;
-            var cas = opponentCastleStat.baseValue;
-            gameUI.SetOpponentGenhp(opponentGenhpStat.effectiveValue);
+            int change = oldValue - newValue;
+            int def = opponentDefenseStat.baseValue;
+            int cas = opponentCastleStat.baseValue;
             if (def >= change)
             {
                 opponentDefenseStat.baseValue -= change;
@@ -315,7 +313,7 @@ public class DemoHumanPlayer : DemoPlayer
                 opponentCastleStat.baseValue -= change;
             }
         };
-        */
+        
 
         deckZone = playerInfo.namedZones["Deck"];
         deckZone.onZoneChanged += numCards =>
@@ -473,8 +471,6 @@ public class DemoHumanPlayer : DemoPlayer
         gameUI.SetOpponentMagic(opponentMagicStat.effectiveValue);
         gameUI.SetPlayerCrystals(crystalsStat.effectiveValue);
         gameUI.SetOpponentCrystals(opponentCrystalsStat.effectiveValue);
-        //gameUI.SetPlayerGenhp(genhpStat.effectiveValue);
-        //gameUI.SetOpponentGenhp(opponentGenhpStat.effectiveValue);
 
         gameUI.SetPlayerHandCards(handZone.cards.Count);
         gameUI.SetPlayerGraveyardCards(graveyardZone.numCards);
@@ -1254,7 +1250,20 @@ public class DemoHumanPlayer : DemoPlayer
                         opponentCrystalsStat.baseValue -= payResourceCost.value;
                         break;
                     case 8:
-                        opponentGenhpStat.baseValue -= payResourceCost.value;
+                        /*
+                        int def = opponentDefenseStat.baseValue;
+                        int val = payResourceCost.value;
+                        if (def >= val)
+                            opponentDefenseStat.baseValue -= val;
+                        else if (def > 0)
+                        {
+                            opponentDefenseStat.baseValue -= def;
+                            opponentCastleStat.baseValue -= val - def;
+                        }
+                        else
+                            opponentCastleStat.baseValue -= val;
+                        */
+                        //opponentDefenseStat.baseValue -= payResourceCost.value;
                         break;
                     default:
                         break;
