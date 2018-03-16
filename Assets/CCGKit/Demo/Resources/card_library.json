@@ -836,7 +836,7 @@
                         "$type": "CCGKit.StringProperty"
                     },
                     {
-                        "value": "Weapon",
+                        "value": "Archer",
                         "name": "Picture",
                         "$type": "CCGKit.StringProperty"
                     },
@@ -954,7 +954,7 @@
                         "$type": "CCGKit.StringProperty"
                     },
                     {
-                        "value": "Weapon",
+                        "value": "FireArcher",
                         "name": "Picture",
                         "$type": "CCGKit.StringProperty"
                     },
@@ -1072,7 +1072,7 @@
                         "$type": "CCGKit.StringProperty"
                     },
                     {
-                        "value": "Weapon",
+                        "value": "Bomb",
                         "name": "Picture",
                         "$type": "CCGKit.StringProperty"
                     },
@@ -1190,7 +1190,7 @@
                         "$type": "CCGKit.StringProperty"
                     },
                     {
-                        "value": "Weapon",
+                        "value": "Cannon",
                         "name": "Picture",
                         "$type": "CCGKit.StringProperty"
                     },
@@ -1308,7 +1308,7 @@
                         "$type": "CCGKit.StringProperty"
                     },
                     {
-                        "value": "Weapon",
+                        "value": "Platoon",
                         "name": "Picture",
                         "$type": "CCGKit.StringProperty"
                     },
@@ -1426,7 +1426,7 @@
                         "$type": "CCGKit.StringProperty"
                     },
                     {
-                        "value": "Weapon",
+                        "value": "Ambush",
                         "name": "Picture",
                         "$type": "CCGKit.StringProperty"
                     },
@@ -1486,7 +1486,7 @@
                         "$type": "CCGKit.StringProperty"
                     },
                     {
-                        "value": "weapon",
+                        "value": "Knight",
                         "name": "Picture",
                         "$type": "CCGKit.StringProperty"
                     },
@@ -1604,7 +1604,7 @@
                         "$type": "CCGKit.StringProperty"
                     },
                     {
-                        "value": "Weapon",
+                        "value": "Thief",
                         "name": "Picture",
                         "$type": "CCGKit.StringProperty"
                     },
@@ -1626,7 +1626,7 @@
             },
             {
                 "cardTypeId": 1,
-                "name": "REINFORCEMENTS",
+                "name": "RECRUIT",
                 "costs": [
                     {
                         "statId": 5,
@@ -1641,7 +1641,7 @@
                         "$type": "CCGKit.StringProperty"
                     },
                     {
-                        "value": "Weapon",
+                        "value": "Recruit",
                         "name": "Picture",
                         "$type": "CCGKit.StringProperty"
                     },
@@ -1701,7 +1701,7 @@
                         "$type": "CCGKit.StringProperty"
                     },
                     {
-                        "value": "Weapon",
+                        "value": "Guards",
                         "name": "Picture",
                         "$type": "CCGKit.StringProperty"
                     },
@@ -1766,7 +1766,7 @@
                         "$type": "CCGKit.StringProperty"
                     },
                     {
-                        "value": "Crystal",
+                        "value": "Mage",
                         "name": "Picture",
                         "$type": "CCGKit.StringProperty"
                     },
@@ -1826,7 +1826,7 @@
                         "$type": "CCGKit.StringProperty"
                     },
                     {
-                        "value": "Crystal",
+                        "value": "Lightning",
                         "name": "Picture",
                         "$type": "CCGKit.StringProperty"
                     },
@@ -1944,7 +1944,7 @@
                         "$type": "CCGKit.StringProperty"
                     },
                     {
-                        "value": "Crystal",
+                        "value": "Quake",
                         "name": "Picture",
                         "$type": "CCGKit.StringProperty"
                     },
@@ -2062,7 +2062,7 @@
                         "$type": "CCGKit.StringProperty"
                     },
                     {
-                        "value": "Crystal",
+                        "value": "Pixies",
                         "name": "Picture",
                         "$type": "CCGKit.StringProperty"
                     },
@@ -2122,7 +2122,7 @@
                         "$type": "CCGKit.StringProperty"
                     },
                     {
-                        "value": "Crystal",
+                        "value": "MagicWall",
                         "name": "Picture",
                         "$type": "CCGKit.StringProperty"
                     },
@@ -2182,7 +2182,7 @@
                         "$type": "CCGKit.StringProperty"
                     },
                     {
-                        "value": "Crystal",
+                        "value": "AddWeapons",
                         "name": "Picture",
                         "$type": "CCGKit.StringProperty"
                     },
@@ -2242,7 +2242,7 @@
                         "$type": "CCGKit.StringProperty"
                     },
                     {
-                        "value": "Crystal",
+                        "value": "AddBricks",
                         "name": "Picture",
                         "$type": "CCGKit.StringProperty"
                     },
@@ -2302,7 +2302,7 @@
                         "$type": "CCGKit.StringProperty"
                     },
                     {
-                        "value": "Crystal",
+                        "value": "AddCrystals",
                         "name": "Picture",
                         "$type": "CCGKit.StringProperty"
                     },
@@ -2362,7 +2362,7 @@
                         "$type": "CCGKit.StringProperty"
                     },
                     {
-                        "value": "Crystal",
+                        "value": "RemoveWeapons",
                         "name": "Picture",
                         "$type": "CCGKit.StringProperty"
                     },
@@ -2422,7 +2422,7 @@
                         "$type": "CCGKit.StringProperty"
                     },
                     {
-                        "value": "Crystal",
+                        "value": "RemoveBricks",
                         "name": "Picture",
                         "$type": "CCGKit.StringProperty"
                     },
@@ -2482,7 +2482,7 @@
                         "$type": "CCGKit.StringProperty"
                     },
                     {
-                        "value": "Crystal",
+                        "value": "RemoveCrystals",
                         "name": "Picture",
                         "$type": "CCGKit.StringProperty"
                     },
@@ -2532,7 +2532,7 @@
         "cards": [
             {
                 "cardTypeId": 1,
-                "name": "BUILDERS",
+                "name": "BUILDER",
                 "costs": [
                     {
                         "statId": 3,
@@ -2547,7 +2547,7 @@
                         "$type": "CCGKit.StringProperty"
                     },
                     {
-                        "value": "Brick",
+                        "value": "Builder",
                         "name": "Picture",
                         "$type": "CCGKit.StringProperty"
                     },
@@ -2607,7 +2607,7 @@
                         "$type": "CCGKit.StringProperty"
                     },
                     {
-                        "value": "Brick",
+                        "value": "Tower",
                         "name": "Picture",
                         "$type": "CCGKit.StringProperty"
                     },
@@ -2667,7 +2667,7 @@
                         "$type": "CCGKit.StringProperty"
                     },
                     {
-                        "value": "Brick",
+                        "value": "Tavern",
                         "name": "Picture",
                         "$type": "CCGKit.StringProperty"
                     },
@@ -2727,7 +2727,7 @@
                         "$type": "CCGKit.StringProperty"
                     },
                     {
-                        "value": "Brick",
+                        "value": "House",
                         "name": "Picture",
                         "$type": "CCGKit.StringProperty"
                     },
@@ -2787,7 +2787,7 @@
                         "$type": "CCGKit.StringProperty"
                     },
                     {
-                        "value": "Brick",
+                        "value": "Babylon",
                         "name": "Picture",
                         "$type": "CCGKit.StringProperty"
                     },
@@ -2847,7 +2847,7 @@
                         "$type": "CCGKit.StringProperty"
                     },
                     {
-                        "value": "Brick",
+                        "value": "Wall",
                         "name": "Picture",
                         "$type": "CCGKit.StringProperty"
                     },
@@ -2907,7 +2907,7 @@
                         "$type": "CCGKit.StringProperty"
                     },
                     {
-                        "value": "Brick",
+                        "value": "School",
                         "name": "Picture",
                         "$type": "CCGKit.StringProperty"
                     },
@@ -3011,7 +3011,7 @@
                         "$type": "CCGKit.StringProperty"
                     },
                     {
-                        "value": "Brick",
+                        "value": "Fence",
                         "name": "Picture",
                         "$type": "CCGKit.StringProperty"
                     },
@@ -3071,7 +3071,7 @@
                         "$type": "CCGKit.StringProperty"
                     },
                     {
-                        "value": "Brick",
+                        "value": "Catapult",
                         "name": "Picture",
                         "$type": "CCGKit.StringProperty"
                     },
@@ -3189,7 +3189,7 @@
                         "$type": "CCGKit.StringProperty"
                     },
                     {
-                        "value": "Brick",
+                        "value": "BatteringRam",
                         "name": "Picture",
                         "$type": "CCGKit.StringProperty"
                     },
@@ -3307,7 +3307,7 @@
                         "$type": "CCGKit.StringProperty"
                     },
                     {
-                        "value": "Brick",
+                        "value": "Wain",
                         "name": "Picture",
                         "$type": "CCGKit.StringProperty"
                     },
@@ -3389,7 +3389,7 @@
                         "$type": "CCGKit.StringProperty"
                     },
                     {
-                        "value": "Brick",
+                        "value": "LargeWall",
                         "name": "Picture",
                         "$type": "CCGKit.StringProperty"
                     },
@@ -3454,7 +3454,7 @@
                         "$type": "CCGKit.StringProperty"
                     },
                     {
-                        "value": "Brick",
+                        "value": "Reverse",
                         "name": "Picture",
                         "$type": "CCGKit.StringProperty"
                     },
