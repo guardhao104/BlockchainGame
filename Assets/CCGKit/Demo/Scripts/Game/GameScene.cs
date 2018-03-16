@@ -19,6 +19,7 @@ public class GameScene : BaseScene
         {
             popup.text.text = "Waiting for game to start...";
         });
+       
         if (GameNetworkManager.Instance.isSinglePlayer)
         {
             Invoke("AddBot", 1.5f);
