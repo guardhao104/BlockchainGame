@@ -32,6 +32,8 @@ public class CardView : MonoBehaviour
 
     public int manaCost { get; protected set; }
 
+    public int statId { get; protected set; }
+
     [HideInInspector]
     public bool isPreview;
 
@@ -63,6 +65,7 @@ public class CardView : MonoBehaviour
         {
             var payResourceCost = cost as PayResourceCost;
             manaCost = payResourceCost.value;
+            statId = payResourceCost.statId;
             costText.text = manaCost.ToString();
         }
 
@@ -84,6 +87,7 @@ public class CardView : MonoBehaviour
         {
             var payResourceCost = cost as PayResourceCost;
             manaCost = payResourceCost.value;
+            statId = payResourceCost.statId;
             costText.text = manaCost.ToString();
         }
 
@@ -97,7 +101,29 @@ public class CardView : MonoBehaviour
 
     public virtual bool CanBePlayed(DemoHumanPlayer owner)
     {
-        return owner.isActivePlayer && owner.manaStat.effectiveValue >= manaCost;
+        switch (statId)
+        {
+            case 0:
+                return owner.isActivePlayer && owner.castleStat.effectiveValue >= manaCost;
+            case 1:
+                return owner.isActivePlayer && owner.defenseStat.effectiveValue >= manaCost;
+            case 2:
+                return owner.isActivePlayer && owner.workersStat.effectiveValue >= manaCost;
+            case 3:
+                return owner.isActivePlayer && owner.bricksStat.effectiveValue >= manaCost;
+            case 4:
+                return owner.isActivePlayer && owner.soldiersStat.effectiveValue >= manaCost;
+            case 5:
+                return owner.isActivePlayer && owner.weaponStat.effectiveValue >= manaCost;
+            case 6:
+                return owner.isActivePlayer && owner.magicStat.effectiveValue >= manaCost;
+            case 7:
+                return owner.isActivePlayer && owner.crystalsStat.effectiveValue >= manaCost;
+            case 8:
+                return owner.isActivePlayer && owner.genhpStat.effectiveValue >= manaCost;
+            default:
+                return false;
+        }
     }
 
     public bool IsHighlighted()

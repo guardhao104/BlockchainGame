@@ -72,7 +72,7 @@
         "$type": "CCGKit.PlayerStat"
     },
     {
-        "name": "GenHp",
+        "name": "GenHP",
         "baseValue": 40,
         "originalValue": 40,
         "minValue": 0,

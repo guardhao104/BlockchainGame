@@ -61,11 +61,25 @@ public class DemoHumanPlayer : DemoPlayer
     protected float accTime;
     protected float secsAccTime;
 
-    public Stat lifeStat { get; protected set; }
-    public Stat manaStat { get; protected set; }
+    public Stat castleStat { get; protected set; }
+    public Stat defenseStat { get; protected set; }
+    public Stat workersStat { get; protected set; }
+    public Stat bricksStat { get; protected set; }
+    public Stat soldiersStat { get; protected set; }
+    public Stat weaponStat { get; protected set; }
+    public Stat magicStat { get; protected set; }
+    public Stat crystalsStat { get; protected set; }
+    public Stat genhpStat { get; protected set; }
 
-    protected Stat opponentLifeStat { get; set; }
-    protected Stat opponentManaStat { get; set; }
+    public Stat opponentCastleStat { get; protected set; }
+    public Stat opponentDefenseStat { get; protected set; }
+    public Stat opponentWorkersStat { get; protected set; }
+    public Stat opponentBricksStat { get; protected set; }
+    public Stat opponentSoldiersStat { get; protected set; }
+    public Stat opponentWeaponStat { get; protected set; }
+    public Stat opponentMagicStat { get; protected set; }
+    public Stat opponentCrystalsStat { get; protected set; }
+    public Stat opponentGenhpStat { get; protected set; }
 
     public RuntimeZone deckZone;
     public RuntimeZone handZone;
@@ -113,45 +127,195 @@ public class DemoHumanPlayer : DemoPlayer
 
         foreach (var entry in playerInfo.stats)
         {
-            if (entry.Value.name == "Life")
+            if (entry.Value.name == "Castle")
             {
-                lifeStat = entry.Value;
+                castleStat = entry.Value;
             }
-            else if (entry.Value.name == "Mana")
+            else if (entry.Value.name == "Defense")
             {
-                manaStat = entry.Value;
+                defenseStat = entry.Value;
+            }
+            else if (entry.Value.name == "Workers")
+            {
+                workersStat = entry.Value;
+            }
+            else if (entry.Value.name == "Bricks")
+            {
+                bricksStat = entry.Value;
+            }
+            else if (entry.Value.name == "Soldiers")
+            {
+                soldiersStat = entry.Value;
+            }
+            else if (entry.Value.name == "Weapons")
+            {
+                weaponStat = entry.Value;
+            }
+            else if (entry.Value.name == "Magic")
+            {
+                magicStat = entry.Value;
+            }
+            else if (entry.Value.name == "Crystals")
+            {
+                crystalsStat = entry.Value;
+            }
+            else if (entry.Value.name == "GenHP")
+            {
+                genhpStat = entry.Value;
             }
         }
         foreach (var entry in opponentInfo.stats)
         {
-            if (entry.Value.name == "Life")
+            if (entry.Value.name == "Castle")
             {
-                opponentLifeStat = entry.Value;
+                opponentCastleStat = entry.Value;
             }
-            else if (entry.Value.name == "Mana")
+            else if (entry.Value.name == "Defense")
             {
-                opponentManaStat = entry.Value;
+                opponentDefenseStat = entry.Value;
+            }
+            else if (entry.Value.name == "Workers")
+            {
+                opponentWorkersStat = entry.Value;
+            }
+            else if (entry.Value.name == "Bricks")
+            {
+                opponentBricksStat = entry.Value;
+            }
+            else if (entry.Value.name == "Soldiers")
+            {
+                opponentSoldiersStat = entry.Value;
+            }
+            else if (entry.Value.name == "Weapons")
+            {
+                opponentWeaponStat = entry.Value;
+            }
+            else if (entry.Value.name == "Magic")
+            {
+                opponentMagicStat = entry.Value;
+            }
+            else if (entry.Value.name == "Crystals")
+            {
+                opponentCrystalsStat = entry.Value;
+            }
+            else if (entry.Value.name == "GenHP")
+            {
+                opponentGenhpStat = entry.Value;
             }
         }
 
-        lifeStat.onValueChanged += (oldValue, newValue) =>
+        castleStat.onValueChanged += (oldValue, newValue) =>
         {
-            gameUI.SetPlayerHealth(lifeStat.effectiveValue);
+            gameUI.SetPlayerCastle(castleStat.effectiveValue);
         };
-        manaStat.onValueChanged += (oldValue, newValue) =>
+        defenseStat.onValueChanged += (oldValue, newValue) =>
         {
-            gameUI.SetPlayerMana(manaStat.effectiveValue);
+            gameUI.SetPlayerDefense(defenseStat.effectiveValue);
+        };
+        workersStat.onValueChanged += (oldValue, newValue) =>
+        {
+            gameUI.SetPlayerWorkers(workersStat.effectiveValue);
+        };
+        bricksStat.onValueChanged += (oldValue, newValue) =>
+        {
+            gameUI.SetPlayerBricks(bricksStat.effectiveValue);
             UpdateHandCardsHighlight();
         };
-
-        opponentLifeStat.onValueChanged += (oldValue, newValue) =>
+        soldiersStat.onValueChanged += (oldValue, newValue) =>
         {
-            gameUI.SetOpponentHealth(opponentLifeStat.effectiveValue);
+            gameUI.SetPlayerSoldiers(soldiersStat.effectiveValue);
         };
-        opponentManaStat.onValueChanged += (oldValue, newValue) =>
+        weaponStat.onValueChanged += (oldValue, newValue) =>
         {
-            gameUI.SetOpponentMana(opponentManaStat.effectiveValue);
+            gameUI.SetPlayerWeapon(weaponStat.effectiveValue);
+            UpdateHandCardsHighlight();
         };
+        magicStat.onValueChanged += (oldValue, newValue) =>
+        {
+            gameUI.SetPlayerMagic(magicStat.effectiveValue);
+        };
+        crystalsStat.onValueChanged += (oldValue, newValue) =>
+        {
+            gameUI.SetPlayerCrystals(crystalsStat.effectiveValue);
+            UpdateHandCardsHighlight();
+        };   
+        /*
+        genhpStat.onValueChanged += (oldValue, newValue) =>
+        {
+            var change = oldValue - newValue;
+            var def = defenseStat.baseValue;
+            var cas = castleStat.baseValue;
+            gameUI.SetPlayerGenhp(genhpStat.effectiveValue);
+            if (def >= change)
+            {
+                defenseStat.baseValue -= change;
+            }
+            else if (defenseStat.baseValue > 0)
+            {
+                defenseStat.baseValue -= def;
+                castleStat.baseValue -= change - def;
+            }
+            else
+            {
+                castleStat.baseValue -= change;
+            }
+        };
+        */
+        
+        opponentCastleStat.onValueChanged += (oldValue, newValue) =>
+        {
+            gameUI.SetOpponentCastle(opponentCastleStat.effectiveValue);
+        };
+        opponentDefenseStat.onValueChanged += (oldValue, newValue) =>
+        {
+            gameUI.SetOpponentDefense(opponentDefenseStat.effectiveValue);
+        };
+        opponentWorkersStat.onValueChanged += (oldValue, newValue) =>
+        {
+            gameUI.SetOpponentWorkers(opponentWorkersStat.effectiveValue);
+        };
+        opponentBricksStat.onValueChanged += (oldValue, newValue) =>
+        {
+            gameUI.SetOpponentBricks(opponentBricksStat.effectiveValue);
+        };
+        opponentSoldiersStat.onValueChanged += (oldValue, newValue) =>
+        {
+            gameUI.SetOpponentSoldiers(opponentSoldiersStat.effectiveValue);
+        };
+        opponentWeaponStat.onValueChanged += (oldValue, newValue) =>
+        {
+            gameUI.SetOpponentWeapon(opponentWeaponStat.effectiveValue);
+        };
+        opponentMagicStat.onValueChanged += (oldValue, newValue) =>
+        {
+            gameUI.SetOpponentMagic(opponentMagicStat.effectiveValue);
+        };
+        opponentCrystalsStat.onValueChanged += (oldValue, newValue) =>
+        {
+            gameUI.SetOpponentCrystals(opponentCrystalsStat.effectiveValue);
+        };
+        /*
+        opponentGenhpStat.onValueChanged += (oldValue, newValue) =>
+        {
+            var change = oldValue - newValue;
+            var def = opponentDefenseStat.baseValue;
+            var cas = opponentCastleStat.baseValue;
+            gameUI.SetOpponentGenhp(opponentGenhpStat.effectiveValue);
+            if (def >= change)
+            {
+                opponentDefenseStat.baseValue -= change;
+            }
+            else if (defenseStat.baseValue > 0)
+            {
+                opponentDefenseStat.baseValue -= def;
+                opponentCastleStat.baseValue -= change - def;
+            }
+            else
+            {
+                opponentCastleStat.baseValue -= change;
+            }
+        };
+        */
 
         deckZone = playerInfo.namedZones["Deck"];
         deckZone.onZoneChanged += numCards =>
@@ -293,10 +457,24 @@ public class DemoHumanPlayer : DemoPlayer
         RearrangeOpponentHand();
 
         // Update the UI as appropriate.
-        gameUI.SetPlayerHealth(lifeStat.effectiveValue);
-        gameUI.SetOpponentHealth(opponentLifeStat.effectiveValue);
-        gameUI.SetPlayerMana(manaStat.effectiveValue);
-        gameUI.SetOpponentMana(opponentManaStat.effectiveValue);
+        gameUI.SetPlayerCastle(castleStat.effectiveValue);
+        gameUI.SetOpponentCastle(opponentCastleStat.effectiveValue);
+        gameUI.SetPlayerDefense(defenseStat.effectiveValue);
+        gameUI.SetOpponentDefense(opponentDefenseStat.effectiveValue);
+        gameUI.SetPlayerWorkers(workersStat.effectiveValue);
+        gameUI.SetOpponentWorkers(opponentWorkersStat.effectiveValue);
+        gameUI.SetPlayerBricks(bricksStat.effectiveValue);
+        gameUI.SetOpponentBricks(opponentBricksStat.effectiveValue);
+        gameUI.SetPlayerSoldiers(soldiersStat.effectiveValue);
+        gameUI.SetOpponentSoldiers(opponentSoldiersStat.effectiveValue);
+        gameUI.SetPlayerWeapon(weaponStat.effectiveValue);
+        gameUI.SetOpponentWeapon(opponentWeaponStat.effectiveValue);
+        gameUI.SetPlayerMagic(magicStat.effectiveValue);
+        gameUI.SetOpponentMagic(opponentMagicStat.effectiveValue);
+        gameUI.SetPlayerCrystals(crystalsStat.effectiveValue);
+        gameUI.SetOpponentCrystals(opponentCrystalsStat.effectiveValue);
+        //gameUI.SetPlayerGenhp(genhpStat.effectiveValue);
+        //gameUI.SetOpponentGenhp(opponentGenhpStat.effectiveValue);
 
         gameUI.SetPlayerHandCards(handZone.cards.Count);
         gameUI.SetPlayerGraveyardCards(graveyardZone.numCards);
@@ -982,6 +1160,7 @@ public class DemoHumanPlayer : DemoPlayer
         RearrangeOpponentHand();
         gameUI.SetOpponentHandCards(opponentHandCards.Count);
 
+        /*
         if (cardType.name == "Creature")
         {
             var opponentBoard = opponentInfo.namedZones["Board"];
@@ -1030,7 +1209,9 @@ public class DemoHumanPlayer : DemoPlayer
                 }
             });
         }
-        else if (cardType.name == "Spell")
+        
+        else*/
+        if (cardType.name == "Spell")
         {
             var opponentBoard = opponentInfo.namedZones["Board"];
             effectSolver.SetDestroyConditions(opponentBoard.cards[opponentBoard.cards.Count - 1]);
@@ -1046,9 +1227,40 @@ public class DemoHumanPlayer : DemoPlayer
             if (cost != null)
             {
                 var payResourceCost = cost as PayResourceCost;
-                opponentManaStat.baseValue -= payResourceCost.value;
+                switch (payResourceCost.statId)
+                {
+                    case 0:
+                        opponentCastleStat.baseValue -= payResourceCost.value;
+                        break;
+                    case 1:
+                        opponentDefenseStat.baseValue -= payResourceCost.value;
+                        break;
+                    case 2:
+                        opponentWorkersStat.baseValue -= payResourceCost.value;
+                        break;
+                    case 3:
+                        opponentBricksStat.baseValue -= payResourceCost.value;
+                        break;
+                    case 4:
+                        opponentSoldiersStat.baseValue -= payResourceCost.value;
+                        break;
+                    case 5:
+                        opponentWeaponStat.baseValue -= payResourceCost.value;
+                        break;
+                    case 6:
+                        opponentMagicStat.baseValue -= payResourceCost.value;
+                        break;
+                    case 7:
+                        opponentCrystalsStat.baseValue -= payResourceCost.value;
+                        break;
+                    case 8:
+                        opponentGenhpStat.baseValue -= payResourceCost.value;
+                        break;
+                    default:
+                        break;
+                }
             }
-
+            /*
             if (msg.targetInfo != null && msg.targetInfo.Length >= 2)
             {
                 var targetingArrow = Instantiate(opponentTargetingArrowPrefab).GetComponent<OpponentTargetingArrow>();
@@ -1070,10 +1282,8 @@ public class DemoHumanPlayer : DemoPlayer
 
                 StartCoroutine(RemoveOpponentTargetingArrow(targetingArrow));
             }
-            else
-            {
-                effectSolver.MoveCard(opponentInfo.netId, opponentBoard.cards[opponentBoard.cards.Count - 1], "Hand", "Board", new List<int>(msg.targetInfo));
-            }
+            */
+            effectSolver.MoveCard(opponentInfo.netId, opponentBoard.cards[opponentBoard.cards.Count - 1], "Hand", "Board", new List<int>(msg.targetInfo));
         }
     }
 

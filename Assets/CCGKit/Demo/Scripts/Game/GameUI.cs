@@ -28,8 +28,8 @@ public class GameUI : MonoBehaviour
     public TextMeshPro playerNameText;
     public TextMeshPro opponentNameText;
 
-    public TextMeshPro playerHealthText;
-    public TextMeshPro opponentHealthText;
+    public TextMeshPro playerCastleText;
+    public TextMeshPro opponentCastleText;
 
     public TextMeshPro playerDeckText;
     public TextMeshPro opponentDeckText;
@@ -40,6 +40,25 @@ public class GameUI : MonoBehaviour
 
     public PlayerManaBar playerManaBar;
     public TextMeshPro opponentManaText;
+
+    public TextMeshPro playerDefenseText;
+    public TextMeshPro opponentDefenseText;
+    //public TextMeshPro playerGenhpText;
+    //public TextMeshPro opponentGenhpText;
+
+    public TextMeshPro playerWorkersText;
+    public TextMeshPro opponentWorkersText;
+    public TextMeshPro playerBricksText;
+    public TextMeshPro opponentBricksText;
+    public TextMeshPro playerSoldiersText;
+    public TextMeshPro opponentSoldiersText;
+    public TextMeshPro playerWeaponText;
+    public TextMeshPro opponentWeaponText;
+    public TextMeshPro playerMagicText;
+    public TextMeshPro opponentMagicText;
+    public TextMeshPro playerCrystalsText;
+    public TextMeshPro opponentCrystalsText;
+
 
     public SpriteRenderer endTurnSprite;
     public TextMeshPro endTurnTitleText;
@@ -58,8 +77,8 @@ public class GameUI : MonoBehaviour
         Assert.IsNotNull(opponentAvatarGlow);
         Assert.IsNotNull(playerNameText);
         Assert.IsNotNull(opponentNameText);
-        Assert.IsNotNull(playerHealthText);
-        Assert.IsNotNull(opponentHealthText);
+        Assert.IsNotNull(playerCastleText);
+        Assert.IsNotNull(opponentCastleText);
         Assert.IsNotNull(playerDeckText);
         Assert.IsNotNull(opponentDeckText);
         Assert.IsNotNull(playerHandText);
@@ -72,6 +91,24 @@ public class GameUI : MonoBehaviour
         Assert.IsNotNull(endTurnTitleText);
         Assert.IsNotNull(endTurnTimeText);
         Assert.IsNotNull(endTurnButton);
+
+        Assert.IsNotNull(playerDefenseText);
+        Assert.IsNotNull(opponentDefenseText);
+        //Assert.IsNotNull(playerGenhpText);
+        //Assert.IsNotNull(opponentGenhpText);
+
+        Assert.IsNotNull(playerWorkersText);
+        Assert.IsNotNull(opponentWorkersText);
+        Assert.IsNotNull(playerBricksText);
+        Assert.IsNotNull(opponentBricksText);
+        Assert.IsNotNull(playerSoldiersText);
+        Assert.IsNotNull(opponentSoldiersText);
+        Assert.IsNotNull(playerWeaponText);
+        Assert.IsNotNull(opponentWeaponText);
+        Assert.IsNotNull(playerMagicText);
+        Assert.IsNotNull(opponentMagicText);
+        Assert.IsNotNull(playerCrystalsText);
+        Assert.IsNotNull(opponentCrystalsText);
     }
 
     public void SetPlayerActive(bool active)
@@ -100,14 +137,14 @@ public class GameUI : MonoBehaviour
         opponentNameText.text = text;
     }
 
-    public void SetPlayerHealth(int health)
+    public void SetPlayerCastle(int castle)
     {
-        playerHealthText.text = health.ToString();
+        playerCastleText.text = castle.ToString();
     }
 
-    public void SetOpponentHealth(int health)
+    public void SetOpponentCastle(int castle)
     {
-        opponentHealthText.text = health.ToString();
+        opponentCastleText.text = castle.ToString();
     }
 
     public void SetPlayerDeckCards(int cards)
@@ -148,6 +185,86 @@ public class GameUI : MonoBehaviour
     public void SetOpponentMana(int mana)
     {
         opponentManaText.text = mana + "/10";
+    }
+
+    public void SetPlayerDefense(int defense)
+    {
+        playerDefenseText.text = defense.ToString();
+    }
+
+    public void SetOpponentDefense(int defense)
+    {
+        opponentDefenseText.text = defense.ToString();
+    }
+    /*
+    public void SetPlayerGenhp(int genhp)
+    {
+        playerGenhpText.text = "GenHP: " + genhp;
+    }
+
+    public void SetOpponentGenhp(int genhp)
+    {
+        opponentGenhpText.text = "GenHP: " + genhp;
+    }
+    */
+    public void SetPlayerWorkers(int workers)
+    {
+        playerWorkersText.text = workers.ToString();
+    }
+
+    public void SetOpponentWorkers(int workers)
+    {
+        opponentWorkersText.text = workers.ToString();
+    }
+
+    public void SetPlayerBricks(int bricks)
+    {
+        playerBricksText.text = bricks.ToString();
+    }
+
+    public void SetOpponentBricks(int bricks)
+    {
+        opponentBricksText.text = bricks.ToString();
+    }
+
+    public void SetPlayerSoldiers(int soldiers)
+    {
+        playerSoldiersText.text = soldiers.ToString();
+    }
+
+    public void SetOpponentSoldiers(int soldiers)
+    {
+        opponentSoldiersText.text = soldiers.ToString();
+    }
+
+    public void SetPlayerWeapon(int weapon)
+    {
+        playerWeaponText.text = weapon.ToString();
+    }
+
+    public void SetOpponentWeapon(int weapon)
+    {
+        opponentWeaponText.text = weapon.ToString();
+    }
+
+    public void SetPlayerMagic(int magic)
+    {
+        playerMagicText.text = magic.ToString();
+    }
+
+    public void SetOpponentMagic(int magic)
+    {
+        opponentMagicText.text = magic.ToString();
+    }
+
+    public void SetPlayerCrystals(int crystals)
+    {
+        playerCrystalsText.text = crystals.ToString();
+    }
+
+    public void SetOpponentCrystals(int crystals)
+    {
+        opponentCrystalsText.text = crystals.ToString();
     }
 
     public void SetEndTurnButtonEnabled(bool enabled)
