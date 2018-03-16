@@ -48,6 +48,14 @@
             "name": "Increase player stat",
             "target": "CurrentPlayer",
             "$type": "CCGKit.IncreasePlayerStatAction"
+        },
+        {
+            "originZoneId": 0,
+            "destinationZoneId": 1,
+            "numCards": 1,
+            "name": "Move cards",
+            "target": "CurrentPlayer",
+            "$type": "CCGKit.MoveCardsAction"
         }
     ],
     "turnEndActions": [

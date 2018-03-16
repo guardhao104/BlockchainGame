@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlockchainGame", "BlockchainGame.csproj", "{3979E09F-2EEE-D2B9-156E-186594F634CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlockchainGame.Editor", "BlockchainGame.Editor.csproj", "{36C34CD3-CB12-3A1B-E51B-86E770AA2E0A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3979E09F-2EEE-D2B9-156E-186594F634CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3979E09F-2EEE-D2B9-156E-186594F634CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3979E09F-2EEE-D2B9-156E-186594F634CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3979E09F-2EEE-D2B9-156E-186594F634CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36C34CD3-CB12-3A1B-E51B-86E770AA2E0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36C34CD3-CB12-3A1B-E51B-86E770AA2E0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36C34CD3-CB12-3A1B-E51B-86E770AA2E0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36C34CD3-CB12-3A1B-E51B-86E770AA2E0A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

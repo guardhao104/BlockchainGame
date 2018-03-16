@@ -114,7 +114,7 @@ public class DemoAIPlayer : DemoPlayer
     /// </summary>
     /// <returns>The AI logic coroutine.</returns>
     protected virtual IEnumerator PerformMove()
-    {
+    {/*
         foreach (var creature in GetCreatureCardsInHand())
         {
             if (TryToPlayCard(creature))
@@ -212,7 +212,7 @@ public class DemoAIPlayer : DemoPlayer
                 }
             }
         }
-
+        */
         yield return new WaitForSeconds(1.0f);
         StopTurn();
     }
