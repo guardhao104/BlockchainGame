@@ -1,0 +1,691 @@
+[
+    {
+        "name": "Develop",
+        "cards": [
+            {
+                "cardTypeId": 1,
+                "name": "ARCHER",
+                "costs": [
+                    {
+                        "statId": 5,
+                        "value": 1,
+                        "$type": "CCGKit.PayResourceCost"
+                    }
+                ],
+                "properties": [
+                    {
+                        "value": "ATTACK 2",
+                        "name": "Text",
+                        "$type": "CCGKit.StringProperty"
+                    },
+                    {
+                        "value": "Spell",
+                        "name": "Picture",
+                        "$type": "CCGKit.StringProperty"
+                    },
+                    {
+                        "value": 3,
+                        "name": "MaxCopies",
+                        "$type": "CCGKit.IntProperty"
+                    },
+                    {
+                        "value": null,
+                        "name": "Material",
+                        "$type": "CCGKit.StringProperty"
+                    }
+                ],
+                "stats": [],
+                "keywords": [],
+                "abilities": [
+                    {
+                        "trigger": {
+                            "zoneId": 3,
+                            "$type": "CCGKit.OnCardLeftZoneTrigger"
+                        },
+                        "name": "-2 def",
+                        "type": "Triggered",
+                        "effect": {
+                            "statId": 1,
+                            "value": {
+                                "constant": 2,
+                                "$type": "CCGKit.ConstantValue"
+                            },
+                            "duration": 0,
+                            "$type": "CCGKit.DecreasePlayerStatEffect"
+                        },
+                        "target": {
+                            "conditions": [
+                                {
+                                    "statId": 1,
+                                    "op": "GreaterThanOrEqualTo",
+                                    "value": 2,
+                                    "$type": "CCGKit.PlayerStatCondition"
+                                }
+                            ],
+                            "$type": "CCGKit.OpponentTarget"
+                        },
+                        "$type": "CCGKit.TriggeredAbility"
+                    },
+                    {
+                        "trigger": {
+                            "zoneId": 0,
+                            "$type": "CCGKit.OnCardEnteredZoneTrigger"
+                        },
+                        "name": "-x def",
+                        "type": "Triggered",
+                        "effect": {
+                            "keywordTypeId": 0,
+                            "keywordValueId": 0,
+                            "gameZoneId": 0,
+                            "cardTypeId": 0,
+                            "$type": "CCGKit.AddKeywordEffect"
+                        },
+                        "target": null,
+                        "$type": "CCGKit.TriggeredAbility"
+                    }
+                ],
+                "id": 0
+            },
+            {
+                "cardTypeId": 1,
+                "name": "ARCHER",
+                "costs": [
+                    {
+                        "statId": 5,
+                        "value": 1,
+                        "$type": "CCGKit.PayResourceCost"
+                    }
+                ],
+                "properties": [
+                    {
+                        "value": "ATTACK 2",
+                        "name": "Text",
+                        "$type": "CCGKit.StringProperty"
+                    },
+                    {
+                        "value": "Spell",
+                        "name": "Picture",
+                        "$type": "CCGKit.StringProperty"
+                    },
+                    {
+                        "value": 3,
+                        "name": "MaxCopies",
+                        "$type": "CCGKit.IntProperty"
+                    },
+                    {
+                        "value": null,
+                        "name": "Material",
+                        "$type": "CCGKit.StringProperty"
+                    }
+                ],
+                "stats": [],
+                "keywords": [],
+                "abilities": [
+                    {
+                        "trigger": {
+                            "zoneId": 1,
+                            "$type": "CCGKit.OnCardLeftZoneTrigger"
+                        },
+                        "name": "-2",
+                        "type": "Triggered",
+                        "effect": {
+                            "statId": 8,
+                            "value": {
+                                "constant": 2,
+                                "$type": "CCGKit.ConstantValue"
+                            },
+                            "duration": 0,
+                            "$type": "CCGKit.DecreasePlayerStatEffect"
+                        },
+                        "target": {
+                            "conditions": [],
+                            "$type": "CCGKit.OpponentTarget"
+                        },
+                        "$type": "CCGKit.TriggeredAbility"
+                    }
+                ],
+                "id": 1
+            },
+            {
+                "cardTypeId": 1,
+                "name": "ARCHER",
+                "costs": [
+                    {
+                        "statId": 5,
+                        "value": 1,
+                        "$type": "CCGKit.PayResourceCost"
+                    }
+                ],
+                "properties": [
+                    {
+                        "value": "ATTACK 2",
+                        "name": "Text",
+                        "$type": "CCGKit.StringProperty"
+                    },
+                    {
+                        "value": "Spell",
+                        "name": "Picture",
+                        "$type": "CCGKit.StringProperty"
+                    },
+                    {
+                        "value": 3,
+                        "name": "MaxCopies",
+                        "$type": "CCGKit.IntProperty"
+                    },
+                    {
+                        "value": null,
+                        "name": "Material",
+                        "$type": "CCGKit.StringProperty"
+                    }
+                ],
+                "stats": [],
+                "keywords": [],
+                "abilities": [
+                    {
+                        "trigger": {
+                            "zoneId": 1,
+                            "$type": "CCGKit.OnCardLeftZoneTrigger"
+                        },
+                        "name": "-2",
+                        "type": "Triggered",
+                        "effect": {
+                            "statId": 8,
+                            "value": {
+                                "constant": 2,
+                                "$type": "CCGKit.ConstantValue"
+                            },
+                            "duration": 0,
+                            "$type": "CCGKit.DecreasePlayerStatEffect"
+                        },
+                        "target": {
+                            "conditions": [],
+                            "$type": "CCGKit.OpponentTarget"
+                        },
+                        "$type": "CCGKit.TriggeredAbility"
+                    }
+                ],
+                "id": 3
+            },
+            {
+                "cardTypeId": 1,
+                "name": "ARCHER",
+                "costs": [
+                    {
+                        "statId": 5,
+                        "value": 1,
+                        "$type": "CCGKit.PayResourceCost"
+                    }
+                ],
+                "properties": [
+                    {
+                        "value": "ATTACK 2",
+                        "name": "Text",
+                        "$type": "CCGKit.StringProperty"
+                    },
+                    {
+                        "value": "Spell",
+                        "name": "Picture",
+                        "$type": "CCGKit.StringProperty"
+                    },
+                    {
+                        "value": 3,
+                        "name": "MaxCopies",
+                        "$type": "CCGKit.IntProperty"
+                    },
+                    {
+                        "value": null,
+                        "name": "Material",
+                        "$type": "CCGKit.StringProperty"
+                    }
+                ],
+                "stats": [],
+                "keywords": [],
+                "abilities": [
+                    {
+                        "trigger": {
+                            "zoneId": 1,
+                            "$type": "CCGKit.OnCardLeftZoneTrigger"
+                        },
+                        "name": "-2",
+                        "type": "Triggered",
+                        "effect": {
+                            "statId": 8,
+                            "value": {
+                                "constant": 2,
+                                "$type": "CCGKit.ConstantValue"
+                            },
+                            "duration": 0,
+                            "$type": "CCGKit.DecreasePlayerStatEffect"
+                        },
+                        "target": {
+                            "conditions": [],
+                            "$type": "CCGKit.OpponentTarget"
+                        },
+                        "$type": "CCGKit.TriggeredAbility"
+                    }
+                ],
+                "id": 2
+            },
+            {
+                "cardTypeId": 1,
+                "name": "ARCHER",
+                "costs": [
+                    {
+                        "statId": 5,
+                        "value": 1,
+                        "$type": "CCGKit.PayResourceCost"
+                    }
+                ],
+                "properties": [
+                    {
+                        "value": "ATTACK 2",
+                        "name": "Text",
+                        "$type": "CCGKit.StringProperty"
+                    },
+                    {
+                        "value": "Spell",
+                        "name": "Picture",
+                        "$type": "CCGKit.StringProperty"
+                    },
+                    {
+                        "value": 3,
+                        "name": "MaxCopies",
+                        "$type": "CCGKit.IntProperty"
+                    },
+                    {
+                        "value": null,
+                        "name": "Material",
+                        "$type": "CCGKit.StringProperty"
+                    }
+                ],
+                "stats": [],
+                "keywords": [],
+                "abilities": [
+                    {
+                        "trigger": {
+                            "zoneId": 1,
+                            "$type": "CCGKit.OnCardLeftZoneTrigger"
+                        },
+                        "name": "-2",
+                        "type": "Triggered",
+                        "effect": {
+                            "statId": 8,
+                            "value": {
+                                "constant": 2,
+                                "$type": "CCGKit.ConstantValue"
+                            },
+                            "duration": 0,
+                            "$type": "CCGKit.DecreasePlayerStatEffect"
+                        },
+                        "target": {
+                            "conditions": [],
+                            "$type": "CCGKit.OpponentTarget"
+                        },
+                        "$type": "CCGKit.TriggeredAbility"
+                    }
+                ],
+                "id": 4
+            },
+            {
+                "cardTypeId": 1,
+                "name": "ARCHER",
+                "costs": [
+                    {
+                        "statId": 5,
+                        "value": 1,
+                        "$type": "CCGKit.PayResourceCost"
+                    }
+                ],
+                "properties": [
+                    {
+                        "value": "ATTACK 2",
+                        "name": "Text",
+                        "$type": "CCGKit.StringProperty"
+                    },
+                    {
+                        "value": "Spell",
+                        "name": "Picture",
+                        "$type": "CCGKit.StringProperty"
+                    },
+                    {
+                        "value": 3,
+                        "name": "MaxCopies",
+                        "$type": "CCGKit.IntProperty"
+                    },
+                    {
+                        "value": null,
+                        "name": "Material",
+                        "$type": "CCGKit.StringProperty"
+                    }
+                ],
+                "stats": [],
+                "keywords": [],
+                "abilities": [
+                    {
+                        "trigger": {
+                            "zoneId": 1,
+                            "$type": "CCGKit.OnCardLeftZoneTrigger"
+                        },
+                        "name": "-2",
+                        "type": "Triggered",
+                        "effect": {
+                            "statId": 8,
+                            "value": {
+                                "constant": 2,
+                                "$type": "CCGKit.ConstantValue"
+                            },
+                            "duration": 0,
+                            "$type": "CCGKit.DecreasePlayerStatEffect"
+                        },
+                        "target": {
+                            "conditions": [],
+                            "$type": "CCGKit.OpponentTarget"
+                        },
+                        "$type": "CCGKit.TriggeredAbility"
+                    }
+                ],
+                "id": 6
+            },
+            {
+                "cardTypeId": 1,
+                "name": "ARCHER",
+                "costs": [
+                    {
+                        "statId": 5,
+                        "value": 1,
+                        "$type": "CCGKit.PayResourceCost"
+                    }
+                ],
+                "properties": [
+                    {
+                        "value": "ATTACK 2",
+                        "name": "Text",
+                        "$type": "CCGKit.StringProperty"
+                    },
+                    {
+                        "value": "Spell",
+                        "name": "Picture",
+                        "$type": "CCGKit.StringProperty"
+                    },
+                    {
+                        "value": 3,
+                        "name": "MaxCopies",
+                        "$type": "CCGKit.IntProperty"
+                    },
+                    {
+                        "value": null,
+                        "name": "Material",
+                        "$type": "CCGKit.StringProperty"
+                    }
+                ],
+                "stats": [],
+                "keywords": [],
+                "abilities": [
+                    {
+                        "trigger": {
+                            "zoneId": 1,
+                            "$type": "CCGKit.OnCardLeftZoneTrigger"
+                        },
+                        "name": "-2",
+                        "type": "Triggered",
+                        "effect": {
+                            "statId": 8,
+                            "value": {
+                                "constant": 2,
+                                "$type": "CCGKit.ConstantValue"
+                            },
+                            "duration": 0,
+                            "$type": "CCGKit.DecreasePlayerStatEffect"
+                        },
+                        "target": {
+                            "conditions": [],
+                            "$type": "CCGKit.OpponentTarget"
+                        },
+                        "$type": "CCGKit.TriggeredAbility"
+                    }
+                ],
+                "id": 5
+            },
+            {
+                "cardTypeId": 1,
+                "name": "ARCHER",
+                "costs": [
+                    {
+                        "statId": 5,
+                        "value": 1,
+                        "$type": "CCGKit.PayResourceCost"
+                    }
+                ],
+                "properties": [
+                    {
+                        "value": "ATTACK 2",
+                        "name": "Text",
+                        "$type": "CCGKit.StringProperty"
+                    },
+                    {
+                        "value": "Spell",
+                        "name": "Picture",
+                        "$type": "CCGKit.StringProperty"
+                    },
+                    {
+                        "value": 3,
+                        "name": "MaxCopies",
+                        "$type": "CCGKit.IntProperty"
+                    },
+                    {
+                        "value": null,
+                        "name": "Material",
+                        "$type": "CCGKit.StringProperty"
+                    }
+                ],
+                "stats": [],
+                "keywords": [],
+                "abilities": [
+                    {
+                        "trigger": {
+                            "zoneId": 1,
+                            "$type": "CCGKit.OnCardLeftZoneTrigger"
+                        },
+                        "name": "-2",
+                        "type": "Triggered",
+                        "effect": {
+                            "statId": 8,
+                            "value": {
+                                "constant": 2,
+                                "$type": "CCGKit.ConstantValue"
+                            },
+                            "duration": 0,
+                            "$type": "CCGKit.DecreasePlayerStatEffect"
+                        },
+                        "target": {
+                            "conditions": [],
+                            "$type": "CCGKit.OpponentTarget"
+                        },
+                        "$type": "CCGKit.TriggeredAbility"
+                    }
+                ],
+                "id": 8
+            },
+            {
+                "cardTypeId": 1,
+                "name": "ARCHER",
+                "costs": [
+                    {
+                        "statId": 5,
+                        "value": 1,
+                        "$type": "CCGKit.PayResourceCost"
+                    }
+                ],
+                "properties": [
+                    {
+                        "value": "ATTACK 2",
+                        "name": "Text",
+                        "$type": "CCGKit.StringProperty"
+                    },
+                    {
+                        "value": "Spell",
+                        "name": "Picture",
+                        "$type": "CCGKit.StringProperty"
+                    },
+                    {
+                        "value": 3,
+                        "name": "MaxCopies",
+                        "$type": "CCGKit.IntProperty"
+                    },
+                    {
+                        "value": null,
+                        "name": "Material",
+                        "$type": "CCGKit.StringProperty"
+                    }
+                ],
+                "stats": [],
+                "keywords": [],
+                "abilities": [
+                    {
+                        "trigger": {
+                            "zoneId": 1,
+                            "$type": "CCGKit.OnCardLeftZoneTrigger"
+                        },
+                        "name": "-2",
+                        "type": "Triggered",
+                        "effect": {
+                            "statId": 8,
+                            "value": {
+                                "constant": 2,
+                                "$type": "CCGKit.ConstantValue"
+                            },
+                            "duration": 0,
+                            "$type": "CCGKit.DecreasePlayerStatEffect"
+                        },
+                        "target": {
+                            "conditions": [],
+                            "$type": "CCGKit.OpponentTarget"
+                        },
+                        "$type": "CCGKit.TriggeredAbility"
+                    }
+                ],
+                "id": 7
+            },
+            {
+                "cardTypeId": 1,
+                "name": "ARCHER",
+                "costs": [
+                    {
+                        "statId": 5,
+                        "value": 1,
+                        "$type": "CCGKit.PayResourceCost"
+                    }
+                ],
+                "properties": [
+                    {
+                        "value": "ATTACK 2",
+                        "name": "Text",
+                        "$type": "CCGKit.StringProperty"
+                    },
+                    {
+                        "value": "Spell",
+                        "name": "Picture",
+                        "$type": "CCGKit.StringProperty"
+                    },
+                    {
+                        "value": 3,
+                        "name": "MaxCopies",
+                        "$type": "CCGKit.IntProperty"
+                    },
+                    {
+                        "value": null,
+                        "name": "Material",
+                        "$type": "CCGKit.StringProperty"
+                    }
+                ],
+                "stats": [],
+                "keywords": [],
+                "abilities": [
+                    {
+                        "trigger": {
+                            "zoneId": 1,
+                            "$type": "CCGKit.OnCardLeftZoneTrigger"
+                        },
+                        "name": "-2",
+                        "type": "Triggered",
+                        "effect": {
+                            "statId": 8,
+                            "value": {
+                                "constant": 2,
+                                "$type": "CCGKit.ConstantValue"
+                            },
+                            "duration": 0,
+                            "$type": "CCGKit.DecreasePlayerStatEffect"
+                        },
+                        "target": {
+                            "conditions": [],
+                            "$type": "CCGKit.OpponentTarget"
+                        },
+                        "$type": "CCGKit.TriggeredAbility"
+                    }
+                ],
+                "id": 10
+            },
+            {
+                "cardTypeId": 1,
+                "name": "ARCHER",
+                "costs": [
+                    {
+                        "statId": 5,
+                        "value": 1,
+                        "$type": "CCGKit.PayResourceCost"
+                    }
+                ],
+                "properties": [
+                    {
+                        "value": "ATTACK 2",
+                        "name": "Text",
+                        "$type": "CCGKit.StringProperty"
+                    },
+                    {
+                        "value": "Spell",
+                        "name": "Picture",
+                        "$type": "CCGKit.StringProperty"
+                    },
+                    {
+                        "value": 3,
+                        "name": "MaxCopies",
+                        "$type": "CCGKit.IntProperty"
+                    },
+                    {
+                        "value": null,
+                        "name": "Material",
+                        "$type": "CCGKit.StringProperty"
+                    }
+                ],
+                "stats": [],
+                "keywords": [],
+                "abilities": [
+                    {
+                        "trigger": {
+                            "zoneId": 1,
+                            "$type": "CCGKit.OnCardLeftZoneTrigger"
+                        },
+                        "name": "-2",
+                        "type": "Triggered",
+                        "effect": {
+                            "statId": 8,
+                            "value": {
+                                "constant": 2,
+                                "$type": "CCGKit.ConstantValue"
+                            },
+                            "duration": 0,
+                            "$type": "CCGKit.DecreasePlayerStatEffect"
+                        },
+                        "target": {
+                            "conditions": [],
+                            "$type": "CCGKit.OpponentTarget"
+                        },
+                        "$type": "CCGKit.TriggeredAbility"
+                    }
+                ],
+                "id": 9
+            }
+        ]
+    }
+]

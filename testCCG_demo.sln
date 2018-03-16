@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testCCG_demo", "testCCG_demo.csproj", "{2E080353-1A41-ACB8-9FCD-904D58BA2EBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testCCG_demo.Editor", "testCCG_demo.Editor.csproj", "{D62944F1-171C-71BF-1898-CF70248F5B29}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2E080353-1A41-ACB8-9FCD-904D58BA2EBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E080353-1A41-ACB8-9FCD-904D58BA2EBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E080353-1A41-ACB8-9FCD-904D58BA2EBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E080353-1A41-ACB8-9FCD-904D58BA2EBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D62944F1-171C-71BF-1898-CF70248F5B29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D62944F1-171C-71BF-1898-CF70248F5B29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D62944F1-171C-71BF-1898-CF70248F5B29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D62944F1-171C-71BF-1898-CF70248F5B29}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
