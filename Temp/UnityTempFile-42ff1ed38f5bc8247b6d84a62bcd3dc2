@@ -1,0 +1,429 @@
+-debug
+-target:library
+-nowarn:0169
+-langversion:4
+-out:Temp/Assembly-CSharp.dll
+-unsafe
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.PhysicsModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VehiclesModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ClothModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AnimationModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UIModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainPhysicsModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.IMGUIModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UNETModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.DirectorModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityConnectModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.WebModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VRModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UIElementsModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.StyleSheetsModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AudioModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.GameCenterModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.GridModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ImageConversionModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.InputModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ParticlesLegacyModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.Physics2DModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TilemapModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VideoModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/Editor/UnityEditor.TestRunner.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/Editor/UnityEditor.Timeline.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UIAutomation/Editor/UnityEditor.UIAutomation.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/Editor/UnityEditor.GoogleAudioSpatializer.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/Editor/UnityEditor.HoloLens.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/Editor/UnityEditor.SpatialTracking.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll"
+-r:"C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll"
+-r:Assets/Demigiant/DOTween/DOTween.dll
+-r:Assets/Demigiant/DOTween/DOTween43.dll
+-r:Assets/Demigiant/DOTween/DOTween46.dll
+-r:Assets/Demigiant/DOTween/DOTween50.dll
+-r:Assets/Demigiant/DOTween/Editor/DOTweenEditor.dll
+-r:"Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-1.0.56-Editor.dll"
+-r:"Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-1.0.56-Runtime.dll"
+-r:C:/Users/xin/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll
+-r:C:/Users/xin/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/Editor/UnityEditor.Advertisements.dll
+-r:C:/Users/xin/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/UnityEngine.Analytics.dll
+-r:C:/Users/xin/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/Editor/UnityEditor.Analytics.dll
+-r:C:/Users/xin/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/UnityEngine.Purchasing.dll
+-r:C:/Users/xin/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/Editor/UnityEditor.Purchasing.dll
+-r:C:/Users/xin/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll
+-define:UNITY_5_3_OR_NEWER
+-define:UNITY_5_4_OR_NEWER
+-define:UNITY_5_5_OR_NEWER
+-define:UNITY_5_6_OR_NEWER
+-define:UNITY_2017_1_OR_NEWER
+-define:UNITY_2017_2_OR_NEWER
+-define:UNITY_2017_3_OR_NEWER
+-define:UNITY_2017_3_1
+-define:UNITY_2017_3
+-define:UNITY_2017
+-define:PLATFORM_ARCH_64
+-define:UNITY_64
+-define:ENABLE_AUDIO
+-define:ENABLE_CACHING
+-define:ENABLE_CLOTH
+-define:ENABLE_DUCK_TYPING
+-define:ENABLE_GENERICS
+-define:ENABLE_PVR_GI
+-define:ENABLE_MICROPHONE
+-define:ENABLE_MULTIPLE_DISPLAYS
+-define:ENABLE_PHYSICS
+-define:ENABLE_SPRITERENDERER_FLIPPING
+-define:ENABLE_SPRITES
+-define:ENABLE_GRID
+-define:ENABLE_TILEMAP
+-define:ENABLE_TERRAIN
+-define:ENABLE_RAKNET
+-define:ENABLE_DIRECTOR
+-define:ENABLE_UNET
+-define:ENABLE_LZMA
+-define:ENABLE_UNITYEVENTS
+-define:ENABLE_WEBCAM
+-define:ENABLE_WWW
+-define:ENABLE_CLOUD_SERVICES_COLLAB
+-define:ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS
+-define:ENABLE_CLOUD_SERVICES_ADS
+-define:ENABLE_CLOUD_HUB
+-define:ENABLE_CLOUD_PROJECT_ID
+-define:ENABLE_CLOUD_SERVICES_USE_WEBREQUEST
+-define:ENABLE_CLOUD_SERVICES_UNET
+-define:ENABLE_CLOUD_SERVICES_BUILD
+-define:ENABLE_CLOUD_LICENSE
+-define:ENABLE_EDITOR_HUB
+-define:ENABLE_EDITOR_HUB_LICENSE
+-define:ENABLE_WEBSOCKET_CLIENT
+-define:ENABLE_DIRECTOR_AUDIO
+-define:ENABLE_DIRECTOR_TEXTURE
+-define:ENABLE_TIMELINE
+-define:ENABLE_EDITOR_METRICS
+-define:ENABLE_EDITOR_METRICS_CACHING
+-define:ENABLE_NATIVE_ARRAY
+-define:ENABLE_SPRITE_MASKING
+-define:INCLUDE_DYNAMIC_GI
+-define:INCLUDE_GI
+-define:ENABLE_MONO_BDWGC
+-define:PLATFORM_SUPPORTS_MONO
+-define:RENDER_SOFTWARE_CURSOR
+-define:INCLUDE_PUBNUB
+-define:ENABLE_PLAYMODE_TESTS_RUNNER
+-define:ENABLE_VIDEO
+-define:ENABLE_RMGUI
+-define:ENABLE_PACKMAN
+-define:ENABLE_CUSTOM_RENDER_TEXTURE
+-define:ENABLE_STYLE_SHEETS
+-define:ENABLE_LOCALIZATION
+-define:PLATFORM_STANDALONE_WIN
+-define:PLATFORM_STANDALONE
+-define:UNITY_STANDALONE_WIN
+-define:UNITY_STANDALONE
+-define:ENABLE_SUBSTANCE
+-define:ENABLE_RUNTIME_GI
+-define:ENABLE_MOVIES
+-define:ENABLE_NETWORK
+-define:ENABLE_CRUNCH_TEXTURE_COMPRESSION
+-define:ENABLE_UNITYWEBREQUEST
+-define:ENABLE_CLOUD_SERVICES
+-define:ENABLE_CLOUD_SERVICES_ANALYTICS
+-define:ENABLE_CLOUD_SERVICES_PURCHASING
+-define:ENABLE_CLOUD_SERVICES_CRASH_REPORTING
+-define:ENABLE_EVENT_QUEUE
+-define:ENABLE_CLUSTERINPUT
+-define:ENABLE_VR
+-define:ENABLE_AR
+-define:ENABLE_WEBSOCKET_HOST
+-define:ENABLE_MONO
+-define:NET_2_0_SUBSET
+-define:ENABLE_PROFILER
+-define:DEBUG
+-define:TRACE
+-define:UNITY_ASSERTIONS
+-define:UNITY_EDITOR
+-define:UNITY_EDITOR_64
+-define:UNITY_EDITOR_WIN
+-define:ENABLE_NATIVE_ARRAY_CHECKS
+-define:UNITY_TEAM_LICENSE
+Assets/CCGKit/Core/Scripts/Foundation/Ability.cs
+Assets/CCGKit/Core/Scripts/Foundation/Attributes/CardStatFieldAttribute.cs
+Assets/CCGKit/Core/Scripts/Foundation/Attributes/CardTargetAttribute.cs
+Assets/CCGKit/Core/Scripts/Foundation/Attributes/CardTypeFieldAttribute.cs
+Assets/CCGKit/Core/Scripts/Foundation/Attributes/EnumFieldAttribute.cs
+Assets/CCGKit/Core/Scripts/Foundation/Attributes/FieldAttribute.cs
+Assets/CCGKit/Core/Scripts/Foundation/Attributes/GameZoneFieldAttribute.cs
+Assets/CCGKit/Core/Scripts/Foundation/Attributes/IntFieldAttribute.cs
+Assets/CCGKit/Core/Scripts/Foundation/Attributes/KeywordTypeFieldAttribute.cs
+Assets/CCGKit/Core/Scripts/Foundation/Attributes/KeywordValueFieldAttribute.cs
+Assets/CCGKit/Core/Scripts/Foundation/Attributes/OrderAttribute.cs
+Assets/CCGKit/Core/Scripts/Foundation/Attributes/PlayerStatFieldAttribute.cs
+Assets/CCGKit/Core/Scripts/Foundation/Attributes/PlayerTargetAttribute.cs
+Assets/CCGKit/Core/Scripts/Foundation/Attributes/ValueFieldAttribute.cs
+Assets/CCGKit/Core/Scripts/Foundation/Card.cs
+Assets/CCGKit/Core/Scripts/Foundation/CardSet.cs
+Assets/CCGKit/Core/Scripts/Foundation/CardType.cs
+Assets/CCGKit/Core/Scripts/Foundation/CCGKitInfo.cs
+Assets/CCGKit/Core/Scripts/Foundation/ConditionOperator.cs
+Assets/CCGKit/Core/Scripts/Foundation/Cost.cs
+Assets/CCGKit/Core/Scripts/Foundation/Costs/PayResourceCost.cs
+Assets/CCGKit/Core/Scripts/Foundation/Deck.cs
+Assets/CCGKit/Core/Scripts/Foundation/DefinitionStat.cs
+Assets/CCGKit/Core/Scripts/Foundation/DestroyCardCondition.cs
+Assets/CCGKit/Core/Scripts/Foundation/DestroyCardConditions/StatDestroyCardCondition.cs
+Assets/CCGKit/Core/Scripts/Foundation/Effect.cs
+Assets/CCGKit/Core/Scripts/Foundation/Effects/AddKeywordEffect.cs
+Assets/CCGKit/Core/Scripts/Foundation/Effects/DecreaseCardStatEffect.cs
+Assets/CCGKit/Core/Scripts/Foundation/Effects/DecreasePlayerStatEffect.cs
+Assets/CCGKit/Core/Scripts/Foundation/Effects/IncreaseCardStatEffect.cs
+Assets/CCGKit/Core/Scripts/Foundation/Effects/IncreasePlayerStatEffect.cs
+Assets/CCGKit/Core/Scripts/Foundation/Effects/MoveCardEffect.cs
+Assets/CCGKit/Core/Scripts/Foundation/Effects/RemoveKeywordEffect.cs
+Assets/CCGKit/Core/Scripts/Foundation/Effects/ResetCardStatEffect.cs
+Assets/CCGKit/Core/Scripts/Foundation/Effects/ResetPlayerStatEffect.cs
+Assets/CCGKit/Core/Scripts/Foundation/Effects/SetCardStatEffect.cs
+Assets/CCGKit/Core/Scripts/Foundation/Effects/SetPlayerStatEffect.cs
+Assets/CCGKit/Core/Scripts/Foundation/EffectSolver.cs
+Assets/CCGKit/Core/Scripts/Foundation/EffectTargetCondition.cs
+Assets/CCGKit/Core/Scripts/Foundation/EffectTargetConditions/CardStatCondition.cs
+Assets/CCGKit/Core/Scripts/Foundation/EffectTargetConditions/CardWithKeywordCondition.cs
+Assets/CCGKit/Core/Scripts/Foundation/EffectTargetConditions/CardWithoutKeywordCondition.cs
+Assets/CCGKit/Core/Scripts/Foundation/EffectTargetConditions/PlayerStatCondition.cs
+Assets/CCGKit/Core/Scripts/Foundation/EndGameCondition.cs
+Assets/CCGKit/Core/Scripts/Foundation/EndGameConditions/CardsInZoneEndGameCondition.cs
+Assets/CCGKit/Core/Scripts/Foundation/EndGameConditions/PlayerStatEndGameCondition.cs
+Assets/CCGKit/Core/Scripts/Foundation/GameAction.cs
+Assets/CCGKit/Core/Scripts/Foundation/GameActions/DecreasePlayerStatAction.cs
+Assets/CCGKit/Core/Scripts/Foundation/GameActions/IncreasePlayerStatAction.cs
+Assets/CCGKit/Core/Scripts/Foundation/GameActions/MoveCardsAction.cs
+Assets/CCGKit/Core/Scripts/Foundation/GameActions/SetPlayerStatAction.cs
+Assets/CCGKit/Core/Scripts/Foundation/GameActions/ShuffleCardsAction.cs
+Assets/CCGKit/Core/Scripts/Foundation/GameConfiguration.cs
+Assets/CCGKit/Core/Scripts/Foundation/GameManager.cs
+Assets/CCGKit/Core/Scripts/Foundation/GameProperties.cs
+Assets/CCGKit/Core/Scripts/Foundation/GameState.cs
+Assets/CCGKit/Core/Scripts/Foundation/GameZoneType.cs
+Assets/CCGKit/Core/Scripts/Foundation/Keyword.cs
+Assets/CCGKit/Core/Scripts/Foundation/Networking/ChatHandler.cs
+Assets/CCGKit/Core/Scripts/Foundation/Networking/EffectSolverHandler.cs
+Assets/CCGKit/Core/Scripts/Foundation/Networking/GameNetworkClient.cs
+Assets/CCGKit/Core/Scripts/Foundation/Networking/NetCard.cs
+Assets/CCGKit/Core/Scripts/Foundation/Networking/NetKeyword.cs
+Assets/CCGKit/Core/Scripts/Foundation/Networking/NetPlayerInfo.cs
+Assets/CCGKit/Core/Scripts/Foundation/Networking/NetStat.cs
+Assets/CCGKit/Core/Scripts/Foundation/Networking/NetworkingUtils.cs
+Assets/CCGKit/Core/Scripts/Foundation/Networking/NetworkProtocol.cs
+Assets/CCGKit/Core/Scripts/Foundation/Networking/NetZone.cs
+Assets/CCGKit/Core/Scripts/Foundation/Networking/Player.cs
+Assets/CCGKit/Core/Scripts/Foundation/Networking/PlayerRegistrationHandler.cs
+Assets/CCGKit/Core/Scripts/Foundation/Networking/Server.cs
+Assets/CCGKit/Core/Scripts/Foundation/Networking/ServerHandler.cs
+Assets/CCGKit/Core/Scripts/Foundation/Networking/TurnSequenceHandler.cs
+Assets/CCGKit/Core/Scripts/Foundation/PlayerInfo.cs
+Assets/CCGKit/Core/Scripts/Foundation/Properties/IntProperty.cs
+Assets/CCGKit/Core/Scripts/Foundation/Properties/StringProperty.cs
+Assets/CCGKit/Core/Scripts/Foundation/Property.cs
+Assets/CCGKit/Core/Scripts/Foundation/ReflectionHelpers.cs
+Assets/CCGKit/Core/Scripts/Foundation/Resource.cs
+Assets/CCGKit/Core/Scripts/Foundation/RuntimeCard.cs
+Assets/CCGKit/Core/Scripts/Foundation/RuntimeKeyword.cs
+Assets/CCGKit/Core/Scripts/Foundation/RuntimeZone.cs
+Assets/CCGKit/Core/Scripts/Foundation/Stat.cs
+Assets/CCGKit/Core/Scripts/Foundation/Target.cs
+Assets/CCGKit/Core/Scripts/Foundation/Trigger.cs
+Assets/CCGKit/Core/Scripts/Foundation/Triggers/OnCardEnteredZoneTrigger.cs
+Assets/CCGKit/Core/Scripts/Foundation/Triggers/OnCardLeftZoneTrigger.cs
+Assets/CCGKit/Core/Scripts/Foundation/Triggers/OnCardStatDecreasedTrigger.cs
+Assets/CCGKit/Core/Scripts/Foundation/Triggers/OnCardStatIncreasedTrigger.cs
+Assets/CCGKit/Core/Scripts/Foundation/Triggers/OnCardStatReachedValueTrigger.cs
+Assets/CCGKit/Core/Scripts/Foundation/Triggers/OnPlayerStatDecreasedTrigger.cs
+Assets/CCGKit/Core/Scripts/Foundation/Triggers/OnPlayerStatIncreasedTrigger.cs
+Assets/CCGKit/Core/Scripts/Foundation/Triggers/OnPlayerStatReachedValueTrigger.cs
+Assets/CCGKit/Core/Scripts/Foundation/Triggers/OnPlayerTurnEndedTrigger.cs
+Assets/CCGKit/Core/Scripts/Foundation/Triggers/OnPlayerTurnStartedTrigger.cs
+Assets/CCGKit/Core/Scripts/Foundation/Value.cs
+Assets/CCGKit/Core/Scripts/Foundation/Values/CardsInZoneValue.cs
+Assets/CCGKit/Core/Scripts/Foundation/Values/ConstantValue.cs
+Assets/CCGKit/Core/Scripts/Foundation/Values/PlayerStatValue.cs
+Assets/CCGKit/Core/Scripts/Foundation/Values/RandomValue.cs
+Assets/CCGKit/Core/Scripts/Foundation/Values/TurnNumberValue.cs
+Assets/CCGKit/Core/Scripts/Utils/AudioManager.cs
+Assets/CCGKit/Core/Scripts/Utils/ListShuffle.cs
+Assets/CCGKit/Core/Scripts/Utils/Logger.cs
+Assets/CCGKit/Core/Scripts/Utils/ObjectPool.cs
+Assets/CCGKit/Core/Scripts/Utils/SoundFX.cs
+Assets/CCGKit/Core/Scripts/Utils/StringUtils.cs
+Assets/CCGKit/Demo/Scripts/Game/BaseScene.cs
+Assets/CCGKit/Demo/Scripts/Game/BoardCreature.cs
+Assets/CCGKit/Demo/Scripts/Game/BoardSpell.cs
+Assets/CCGKit/Demo/Scripts/Game/CardListItem.cs
+Assets/CCGKit/Demo/Scripts/Game/CardView.cs
+Assets/CCGKit/Demo/Scripts/Game/ChatDialog.cs
+Assets/CCGKit/Demo/Scripts/Game/CombatAnimation.cs
+Assets/CCGKit/Demo/Scripts/Game/CreateDeckButton.cs
+Assets/CCGKit/Demo/Scripts/Game/CreatureCardView.cs
+Assets/CCGKit/Demo/Scripts/Game/DeckBuilderCard.cs
+Assets/CCGKit/Demo/Scripts/Game/DeckBuilderScene.cs
+Assets/CCGKit/Demo/Scripts/Game/DeckButton.cs
+Assets/CCGKit/Demo/Scripts/Game/EndTurnButton.cs
+Assets/CCGKit/Demo/Scripts/Game/FightTargetingArrow.cs
+Assets/CCGKit/Demo/Scripts/Game/GameListItem.cs
+Assets/CCGKit/Demo/Scripts/Game/GameScene.cs
+Assets/CCGKit/Demo/Scripts/Game/GameUI.cs
+Assets/CCGKit/Demo/Scripts/Game/HandCard.cs
+Assets/CCGKit/Demo/Scripts/Game/HomeScene.cs
+Assets/CCGKit/Demo/Scripts/Game/LobbyScene.cs
+Assets/CCGKit/Demo/Scripts/Game/MenuButton.cs
+Assets/CCGKit/Demo/Scripts/Game/MenuButtonNoGlow.cs
+Assets/CCGKit/Demo/Scripts/Game/OpponentTargetingArrow.cs
+Assets/CCGKit/Demo/Scripts/Game/PlayerAvatar.cs
+Assets/CCGKit/Demo/Scripts/Game/PlayerBox.cs
+Assets/CCGKit/Demo/Scripts/Game/PlayerManaBar.cs
+Assets/CCGKit/Demo/Scripts/Game/Popup.cs
+Assets/CCGKit/Demo/Scripts/Game/PopupChat.cs
+Assets/CCGKit/Demo/Scripts/Game/PopupLoading.cs
+Assets/CCGKit/Demo/Scripts/Game/PopupLogin.cs
+Assets/CCGKit/Demo/Scripts/Game/PopupOneButton.cs
+Assets/CCGKit/Demo/Scripts/Game/PopupPassword.cs
+Assets/CCGKit/Demo/Scripts/Game/PopupSignup.cs
+Assets/CCGKit/Demo/Scripts/Game/PopupTurnStart.cs
+Assets/CCGKit/Demo/Scripts/Game/PopupTwoButtons.cs
+Assets/CCGKit/Demo/Scripts/Game/SpellCardView.cs
+Assets/CCGKit/Demo/Scripts/Game/SpellTargetingArrow.cs
+Assets/CCGKit/Demo/Scripts/Game/TargetingArrow.cs
+Assets/CCGKit/Demo/Scripts/Networking/CombatHandler.cs
+Assets/CCGKit/Demo/Scripts/Networking/DemoAIPlayer.cs
+Assets/CCGKit/Demo/Scripts/Networking/DemoHumanPlayer.cs
+Assets/CCGKit/Demo/Scripts/Networking/DemoNetworkClient.cs
+Assets/CCGKit/Demo/Scripts/Networking/DemoPlayer.cs
+Assets/CCGKit/Demo/Scripts/Networking/DemoServer.cs
+Assets/CCGKit/Demo/Scripts/Networking/GameNetworkManager.cs
+Assets/CCGKit/Demo/Scripts/Networking/PlayCardHandler.cs
+Assets/CCGKit/Dependencies/fullserializer/Converters/fsArrayConverter.cs
+Assets/CCGKit/Dependencies/fullserializer/Converters/fsDateConverter.cs
+Assets/CCGKit/Dependencies/fullserializer/Converters/fsDictionaryConverter.cs
+Assets/CCGKit/Dependencies/fullserializer/Converters/fsEnumConverter.cs
+Assets/CCGKit/Dependencies/fullserializer/Converters/fsForwardConverter.cs
+Assets/CCGKit/Dependencies/fullserializer/Converters/fsGuidConverter.cs
+Assets/CCGKit/Dependencies/fullserializer/Converters/fsIEnumerableConverter.cs
+Assets/CCGKit/Dependencies/fullserializer/Converters/fsKeyValuePairConverter.cs
+Assets/CCGKit/Dependencies/fullserializer/Converters/fsNullableConverter.cs
+Assets/CCGKit/Dependencies/fullserializer/Converters/fsPrimitiveConverter.cs
+Assets/CCGKit/Dependencies/fullserializer/Converters/fsReflectedConverter.cs
+Assets/CCGKit/Dependencies/fullserializer/Converters/fsTypeConverter.cs
+Assets/CCGKit/Dependencies/fullserializer/Converters/fsWeakReferenceConverter.cs
+Assets/CCGKit/Dependencies/fullserializer/Converters/Unity/AnimationCurve_DirectConverter.cs
+Assets/CCGKit/Dependencies/fullserializer/Converters/Unity/Bounds_DirectConverter.cs
+Assets/CCGKit/Dependencies/fullserializer/Converters/Unity/Gradient_DirectConverter.cs
+Assets/CCGKit/Dependencies/fullserializer/Converters/Unity/GUIStyle_DirectConverter.cs
+Assets/CCGKit/Dependencies/fullserializer/Converters/Unity/GUIStyleState_DirectConverter.cs
+Assets/CCGKit/Dependencies/fullserializer/Converters/Unity/Keyframe_DirectConverter.cs
+Assets/CCGKit/Dependencies/fullserializer/Converters/Unity/LayerMask_DirectConverter.cs
+Assets/CCGKit/Dependencies/fullserializer/Converters/Unity/Rect_DirectConverter.cs
+Assets/CCGKit/Dependencies/fullserializer/Converters/Unity/RectOffset_DirectConverter.cs
+Assets/CCGKit/Dependencies/fullserializer/fsAotCompilationManager.cs
+Assets/CCGKit/Dependencies/fullserializer/fsBaseConverter.cs
+Assets/CCGKit/Dependencies/fullserializer/fsConfig.cs
+Assets/CCGKit/Dependencies/fullserializer/fsContext.cs
+Assets/CCGKit/Dependencies/fullserializer/fsConverter.cs
+Assets/CCGKit/Dependencies/fullserializer/fsConverterRegistrar.cs
+Assets/CCGKit/Dependencies/fullserializer/fsData.cs
+Assets/CCGKit/Dependencies/fullserializer/fsDirectConverter.cs
+Assets/CCGKit/Dependencies/fullserializer/fsExceptions.cs
+Assets/CCGKit/Dependencies/fullserializer/fsIgnoreAttribute.cs
+Assets/CCGKit/Dependencies/fullserializer/fsISerializationCallbacks.cs
+Assets/CCGKit/Dependencies/fullserializer/fsJsonParser.cs
+Assets/CCGKit/Dependencies/fullserializer/fsJsonPrinter.cs
+Assets/CCGKit/Dependencies/fullserializer/fsMemberSerialization.cs
+Assets/CCGKit/Dependencies/fullserializer/fsObjectAttribute.cs
+Assets/CCGKit/Dependencies/fullserializer/fsObjectProcessor.cs
+Assets/CCGKit/Dependencies/fullserializer/fsPropertyAttribute.cs
+Assets/CCGKit/Dependencies/fullserializer/fsResult.cs
+Assets/CCGKit/Dependencies/fullserializer/fsSerializer.cs
+Assets/CCGKit/Dependencies/fullserializer/Internal/fsCyclicReferenceManager.cs
+Assets/CCGKit/Dependencies/fullserializer/Internal/fsOption.cs
+Assets/CCGKit/Dependencies/fullserializer/Internal/fsPortableReflection.cs
+Assets/CCGKit/Dependencies/fullserializer/Internal/fsTypeExtensions.cs
+Assets/CCGKit/Dependencies/fullserializer/Internal/fsVersionedType.cs
+Assets/CCGKit/Dependencies/fullserializer/Internal/fsVersionManager.cs
+Assets/CCGKit/Dependencies/fullserializer/Reflection/fsMetaProperty.cs
+Assets/CCGKit/Dependencies/fullserializer/Reflection/fsMetaType.cs
+Assets/CCGKit/Dependencies/fullserializer/Reflection/fsReflectionUtility.cs
+Assets/CCGKit/Dependencies/fullserializer/Reflection/fsTypeCache.cs
+Assets/Demigiant/DOTween/Examples/Basics.cs
+Assets/Demigiant/DOTween/Examples/Sequences.cs
+"Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
+"Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs"
+"Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark02.cs"
+"Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark03.cs"
+"Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark04.cs"
+"Assets/TextMesh Pro/Examples & Extras/Scripts/CameraController.cs"
+"Assets/TextMesh Pro/Examples & Extras/Scripts/ChatController.cs"
+"Assets/TextMesh Pro/Examples & Extras/Scripts/EnvMapAnimator.cs"
+"Assets/TextMesh Pro/Examples & Extras/Scripts/ObjectSpin.cs"
+"Assets/TextMesh Pro/Examples & Extras/Scripts/ShaderPropAnimator.cs"
+"Assets/TextMesh Pro/Examples & Extras/Scripts/SimpleScript.cs"
+"Assets/TextMesh Pro/Examples & Extras/Scripts/SkewTextExample.cs"
+"Assets/TextMesh Pro/Examples & Extras/Scripts/TeleType.cs"
+"Assets/TextMesh Pro/Examples & Extras/Scripts/TextConsoleSimulator.cs"
+"Assets/TextMesh Pro/Examples & Extras/Scripts/TextMeshProFloatingText.cs"
+"Assets/TextMesh Pro/Examples & Extras/Scripts/TextMeshSpawner.cs"
+"Assets/TextMesh Pro/Examples & Extras/Scripts/TMP_DigitValidator.cs"
+"Assets/TextMesh Pro/Examples & Extras/Scripts/TMP_ExampleScript_01.cs"
+"Assets/TextMesh Pro/Examples & Extras/Scripts/TMP_FrameRateCounter.cs"
+"Assets/TextMesh Pro/Examples & Extras/Scripts/TMP_PhoneNumberValidator.cs"
+"Assets/TextMesh Pro/Examples & Extras/Scripts/TMP_TextEventCheck.cs"
+"Assets/TextMesh Pro/Examples & Extras/Scripts/TMP_TextEventHandler.cs"
+"Assets/TextMesh Pro/Examples & Extras/Scripts/TMP_TextInfoDebugTool.cs"
+"Assets/TextMesh Pro/Examples & Extras/Scripts/TMP_TextSelector_A.cs"
+"Assets/TextMesh Pro/Examples & Extras/Scripts/TMP_TextSelector_B.cs"
+"Assets/TextMesh Pro/Examples & Extras/Scripts/TMP_UiFrameRateCounter.cs"
+"Assets/TextMesh Pro/Examples & Extras/Scripts/TMPro_InstructionOverlay.cs"
+"Assets/TextMesh Pro/Examples & Extras/Scripts/VertexColorCycler.cs"
+"Assets/TextMesh Pro/Examples & Extras/Scripts/VertexJitter.cs"
+"Assets/TextMesh Pro/Examples & Extras/Scripts/VertexShakeA.cs"
+"Assets/TextMesh Pro/Examples & Extras/Scripts/VertexShakeB.cs"
+"Assets/TextMesh Pro/Examples & Extras/Scripts/VertexZoom.cs"
+"Assets/TextMesh Pro/Examples & Extras/Scripts/WarpTextExample.cs"
+-r:"C:\Program Files\Unity\Editor\Data\Mono\lib\mono\unity\System.Runtime.Serialization.dll"
+-r:"C:\Program Files\Unity\Editor\Data\Mono\lib\mono\unity\System.Xml.Linq.dll"
+-r:"C:\Program Files\Unity\Editor\Data\Mono\lib\mono\unity\UnityScript.dll"
+-r:"C:\Program Files\Unity\Editor\Data\Mono\lib\mono\unity\UnityScript.Lang.dll"
+-r:"C:\Program Files\Unity\Editor\Data\Mono\lib\mono\unity\Boo.Lang.dll"
+-sdk:unity

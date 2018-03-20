@@ -26,6 +26,12 @@ public class DeckBuilderScene : BaseScene
     private GameObject spellCardViewPrefab;
 
     [SerializeField]
+    private GameObject BrickCardViewPrefab;
+
+    [SerializeField]
+    private GameObject WeaponCardViewPrefab;
+
+    [SerializeField]
     private GameObject deckListContent;
 
     [SerializeField]
@@ -62,6 +68,8 @@ public class DeckBuilderScene : BaseScene
     {
         Assert.IsNotNull(creatureCardViewPrefab);
         Assert.IsNotNull(spellCardViewPrefab);
+        Assert.IsNotNull(BrickCardViewPrefab);
+        Assert.IsNotNull(WeaponCardViewPrefab);
         Assert.IsNotNull(deckListContent);
         Assert.IsNotNull(deckListItemPrefab);
         Assert.IsNotNull(deckListAddItemPrefab);
@@ -210,6 +218,14 @@ public class DeckBuilderScene : BaseScene
             else if (cardType.name == "Spell")
             {
                 go = Instantiate(spellCardViewPrefab as GameObject);
+            }
+            else if(cardType.name == "BrickSpell")
+            {
+                go = Instantiate(BrickCardViewPrefab as GameObject);
+            }
+            else if (cardType.name == "WeaponSpell")
+            {
+                go = Instantiate(WeaponCardViewPrefab as GameObject);
             }
             var cardView = go.GetComponent<CardView>();
             cardView.PopulateWithLibraryInfo(card);
