@@ -41,20 +41,21 @@ public class GameScene : BaseScene
     /// </summary>
     public void OnEndTurnButtonPressed()
     {
-        var localPlayer = NetworkingUtils.GetLocalPlayer() as DemoHumanPlayer;
+        //var localPlayer = NetworkingUtils.GetLocalPlayer() as DemoHumanPlayer;
+        /*
         if (localPlayer != null)
         {
-            //var maxHandSize = GameManager.Instance.Config.properties.maxHandSize;
-            /*if (localPlayer.HandSize > maxHandSize)
+            var maxHandSize = GameManager.Instance.Config.properties.maxHandSize;
+            if (localPlayer.HandSize > maxHandSize)
             {
                 var diff = localPlayer.HandSize - maxHandSize;
                 if (diff == 1)
                     WindowUtils.OpenAlertDialog("You need to discard " + diff + " card from your hand.");
                 else
                     WindowUtils.OpenAlertDialog("You need to discard " + diff + " cards from your hand.");
-            }*/
+            }
             localPlayer.StopTurn();
-        }
+        }*/
     }
 
     /// <summary>

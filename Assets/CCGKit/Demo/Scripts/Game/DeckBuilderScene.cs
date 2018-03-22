@@ -210,6 +210,39 @@ public class DeckBuilderScene : BaseScene
         {
             var card = gameConfig.cards[i];
             var cardType = gameConfig.cardTypes.Find(x => x.id == card.cardTypeId);
+
+
+            
+            GameObject go = null;
+            foreach (var cardSet in gameConfig.cardSets)
+            {
+                foreach (var x in cardSet.cards)
+                {
+                    if (x.name.Equals(card.name))
+                    {
+                        switch(cardSet.name)
+                        {
+                            case "Weapon":
+                                go = Instantiate(WeaponCardViewPrefab as GameObject);
+                                break;
+                            case "Crystal":
+                                go = Instantiate(spellCardViewPrefab as GameObject);
+                                break;
+                            case "Brick":
+                                go = Instantiate(BrickCardViewPrefab as GameObject);
+                                break;
+                            default:
+                                go = Instantiate(spellCardViewPrefab as GameObject);
+                                break;
+                        }
+                        break;
+                    }
+                }
+            }
+            
+
+            
+            /*
             GameObject go = null;
             if (cardType.name == "Creature")
             {
@@ -227,6 +260,7 @@ public class DeckBuilderScene : BaseScene
             {
                 go = Instantiate(WeaponCardViewPrefab as GameObject);
             }
+            */
             var cardView = go.GetComponent<CardView>();
             cardView.PopulateWithLibraryInfo(card);
             cardView.SetHighlightingEnabled(false);

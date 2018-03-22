@@ -122,11 +122,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70b1ef880f39773489e305a2673a4587, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsActivePlayer: 0
-  IsHuman: 0
+  isActivePlayer: 0
+  isHuman: 0
   creatureCardViewPrefab: {fileID: 1130229958192014, guid: 3e2eb5fbe61ddce49b9e848b89eed4f2,
     type: 2}
   spellCardViewPrefab: {fileID: 1236948560037684, guid: d74a1cb162a060d459abb43b4cc47cdb,
+    type: 2}
+  WeaponCardViewPrefab: {fileID: 1755577746784626, guid: 967b016e71f33254d9717115b1f84246,
+    type: 2}
+  BrickCardViewPrefab: {fileID: 1629317310634628, guid: 6041f5735c513b04798519b8bf42cfb0,
     type: 2}
   opponentCardPrefab: {fileID: 1727265671445790, guid: c2e085de934874c5a876cabfe24a44c3,
     type: 2}
@@ -138,6 +142,7 @@ MonoBehaviour:
     type: 2}
   opponentTargetingArrowPrefab: {fileID: 1009513512288260, guid: 3a431f6b2d6393d4e806cd54fbe3bda9,
     type: 2}
+  isCardSelected: 0
 --- !u!114 &11436556
 MonoBehaviour:
   m_ObjectHideFlags: 1
