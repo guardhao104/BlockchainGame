@@ -58,16 +58,7 @@
             "$type": "CCGKit.MoveCardsAction"
         }
     ],
-    "turnEndActions": [
-        {
-            "originZoneId": 0,
-            "destinationZoneId": 1,
-            "numCards": 1,
-            "name": "Move cards",
-            "target": "CurrentPlayer",
-            "$type": "CCGKit.MoveCardsAction"
-        }
-    ],
+    "turnEndActions": [],
     "endGameConditions": [
         {
             "statId": 0,

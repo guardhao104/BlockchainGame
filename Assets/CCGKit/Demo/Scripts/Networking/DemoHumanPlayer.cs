@@ -31,6 +31,12 @@ public class DemoHumanPlayer : DemoPlayer
     private GameObject spellCardViewPrefab;
 
     [SerializeField]
+    private GameObject WeaponCardViewPrefab;
+
+    [SerializeField]
+    private GameObject BrickCardViewPrefab;
+
+    [SerializeField]
     private GameObject opponentCardPrefab;
 
     [SerializeField]
@@ -102,6 +108,8 @@ public class DemoHumanPlayer : DemoPlayer
 
         Assert.IsNotNull(creatureCardViewPrefab);
         Assert.IsNotNull(spellCardViewPrefab);
+        Assert.IsNotNull(WeaponCardViewPrefab);
+        Assert.IsNotNull(BrickCardViewPrefab);
         Assert.IsNotNull(opponentCardPrefab);
         Assert.IsNotNull(boardCreaturePrefab);
         Assert.IsNotNull(spellTargetingArrowPrefab);
@@ -239,13 +247,12 @@ public class DemoHumanPlayer : DemoPlayer
             gameUI.SetPlayerCrystals(crystalsStat.effectiveValue);
             UpdateHandCardsHighlight();
         };   
-        /*
+        
         genhpStat.onValueChanged += (oldValue, newValue) =>
         {
-            var change = oldValue - newValue;
-            var def = defenseStat.baseValue;
-            var cas = castleStat.baseValue;
-            gameUI.SetPlayerGenhp(genhpStat.effectiveValue);
+            int change = oldValue - newValue;
+            int def = defenseStat.baseValue;
+            int cas = castleStat.baseValue;
             if (def >= change)
             {
                 defenseStat.baseValue -= change;
@@ -260,7 +267,7 @@ public class DemoHumanPlayer : DemoPlayer
                 castleStat.baseValue -= change;
             }
         };
-        */
+        
         
         opponentCastleStat.onValueChanged += (oldValue, newValue) =>
         {
@@ -294,13 +301,12 @@ public class DemoHumanPlayer : DemoPlayer
         {
             gameUI.SetOpponentCrystals(opponentCrystalsStat.effectiveValue);
         };
-        /*
+        
         opponentGenhpStat.onValueChanged += (oldValue, newValue) =>
         {
-            var change = oldValue - newValue;
-            var def = opponentDefenseStat.baseValue;
-            var cas = opponentCastleStat.baseValue;
-            gameUI.SetOpponentGenhp(opponentGenhpStat.effectiveValue);
+            int change = oldValue - newValue;
+            int def = opponentDefenseStat.baseValue;
+            int cas = opponentCastleStat.baseValue;
             if (def >= change)
             {
                 opponentDefenseStat.baseValue -= change;
@@ -315,7 +321,7 @@ public class DemoHumanPlayer : DemoPlayer
                 opponentCastleStat.baseValue -= change;
             }
         };
-        */
+        
 
         deckZone = playerInfo.namedZones["Deck"];
         deckZone.onZoneChanged += numCards =>
@@ -473,8 +479,6 @@ public class DemoHumanPlayer : DemoPlayer
         gameUI.SetOpponentMagic(opponentMagicStat.effectiveValue);
         gameUI.SetPlayerCrystals(crystalsStat.effectiveValue);
         gameUI.SetOpponentCrystals(opponentCrystalsStat.effectiveValue);
-        //gameUI.SetPlayerGenhp(genhpStat.effectiveValue);
-        //gameUI.SetOpponentGenhp(opponentGenhpStat.effectiveValue);
 
         gameUI.SetPlayerHandCards(handZone.cards.Count);
         gameUI.SetPlayerGraveyardCards(graveyardZone.numCards);
@@ -884,6 +888,34 @@ public class DemoHumanPlayer : DemoPlayer
         var gameConfig = GameManager.Instance.config;
         var libraryCard = gameConfig.GetCard(card.cardId);
         var cardType = gameConfig.cardTypes.Find(x => x.id == libraryCard.cardTypeId);
+
+        foreach (var cardSet in gameConfig.cardSets)
+        {
+            foreach (var x in cardSet.cards)
+            {
+                if (x.name.Equals(libraryCard.name))
+                {
+                    switch (cardSet.name)
+                    {
+                        case "Weapon":
+                            currentCardPreview = Instantiate(WeaponCardViewPrefab as GameObject);
+                            break;
+                        case "Crystal":
+                            currentCardPreview = Instantiate(spellCardViewPrefab as GameObject);
+                            break;
+                        case "Brick":
+                            currentCardPreview = Instantiate(BrickCardViewPrefab as GameObject);
+                            break;
+                        default:
+                            currentCardPreview = Instantiate(spellCardViewPrefab as GameObject);
+                            break;
+                    }
+                    break;
+                }
+            }
+        }
+
+        /*
         if (cardType.name == "Creature")
         {
             currentCardPreview = Instantiate(creatureCardViewPrefab as GameObject);
@@ -892,6 +924,7 @@ public class DemoHumanPlayer : DemoPlayer
         {
             currentCardPreview = Instantiate(spellCardViewPrefab as GameObject);
         }
+        */
         var cardView = currentCardPreview.GetComponent<CardView>();
         cardView.PopulateWithInfo(card);
         cardView.SetHighlightingEnabled(highlight);
@@ -941,6 +974,32 @@ public class DemoHumanPlayer : DemoPlayer
         var libraryCard = gameConfig.GetCard(card.cardId);
         var cardType = gameConfig.cardTypes.Find(x => x.id == libraryCard.cardTypeId);
         GameObject go = null;
+        foreach (var cardSet in gameConfig.cardSets)
+        {
+            foreach (var x in cardSet.cards)
+            {
+                if (x.name.Equals(libraryCard.name))
+                {
+                    switch (cardSet.name)
+                    {
+                        case "Weapon":
+                            go = Instantiate(WeaponCardViewPrefab as GameObject);
+                            break;
+                        case "Crystal":
+                            go = Instantiate(spellCardViewPrefab as GameObject);
+                            break;
+                        case "Brick":
+                            go = Instantiate(BrickCardViewPrefab as GameObject);
+                            break;
+                        default:
+                            go = Instantiate(spellCardViewPrefab as GameObject);
+                            break;
+                    }
+                    break;
+                }
+            }
+        }
+        /*
         if (cardType.name == "Creature")
         {
             go = Instantiate(creatureCardViewPrefab as GameObject);
@@ -949,6 +1008,7 @@ public class DemoHumanPlayer : DemoPlayer
         {
             go = Instantiate(spellCardViewPrefab as GameObject);
         }
+        */
         var cardView = go.GetComponent<CardView>();
         cardView.PopulateWithInfo(card);
 
@@ -1254,7 +1314,20 @@ public class DemoHumanPlayer : DemoPlayer
                         opponentCrystalsStat.baseValue -= payResourceCost.value;
                         break;
                     case 8:
-                        opponentGenhpStat.baseValue -= payResourceCost.value;
+                        /*
+                        int def = opponentDefenseStat.baseValue;
+                        int val = payResourceCost.value;
+                        if (def >= val)
+                            opponentDefenseStat.baseValue -= val;
+                        else if (def > 0)
+                        {
+                            opponentDefenseStat.baseValue -= def;
+                            opponentCastleStat.baseValue -= val - def;
+                        }
+                        else
+                            opponentCastleStat.baseValue -= val;
+                        */
+                        //opponentDefenseStat.baseValue -= payResourceCost.value;
                         break;
                     default:
                         break;
