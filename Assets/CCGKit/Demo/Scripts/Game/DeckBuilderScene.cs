@@ -209,7 +209,7 @@ public class DeckBuilderScene : BaseScene
         for (var i = startIndex; i < endIndex; i++)
         {
             var card = gameConfig.cards[i];
-            var cardType = gameConfig.cardTypes.Find(x => x.id == card.cardTypeId);
+            //var cardType = gameConfig.cardTypes.Find(x => x.id == card.cardTypeId);
 
 
             
