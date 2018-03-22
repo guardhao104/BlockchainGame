@@ -887,7 +887,7 @@ public class DemoHumanPlayer : DemoPlayer
 
         var gameConfig = GameManager.Instance.config;
         var libraryCard = gameConfig.GetCard(card.cardId);
-        var cardType = gameConfig.cardTypes.Find(x => x.id == libraryCard.cardTypeId);
+        //var cardType = gameConfig.cardTypes.Find(x => x.id == libraryCard.cardTypeId);
 
         foreach (var cardSet in gameConfig.cardSets)
         {
@@ -972,7 +972,7 @@ public class DemoHumanPlayer : DemoPlayer
     {
         var gameConfig = GameManager.Instance.config;
         var libraryCard = gameConfig.GetCard(card.cardId);
-        var cardType = gameConfig.cardTypes.Find(x => x.id == libraryCard.cardTypeId);
+        //var cardType = gameConfig.cardTypes.Find(x => x.id == libraryCard.cardTypeId);
         GameObject go = null;
         foreach (var cardSet in gameConfig.cardSets)
         {
