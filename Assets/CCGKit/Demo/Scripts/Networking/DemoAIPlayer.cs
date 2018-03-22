@@ -122,7 +122,7 @@ public class DemoAIPlayer : DemoPlayer
                 yield return new WaitForSeconds(2.0f);
             }
         }
-
+        
         foreach (var spell in GetSpellCardsInHand())
         {
             if (TryToPlayCard(spell))
