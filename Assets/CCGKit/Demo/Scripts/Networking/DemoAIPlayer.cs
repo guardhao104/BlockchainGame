@@ -122,7 +122,7 @@ public class DemoAIPlayer : DemoPlayer
                 yield return new WaitForSeconds(2.0f);
             }
         }
-        
+        */
         foreach (var spell in GetSpellCardsInHand())
         {
             if (TryToPlayCard(spell))
@@ -130,9 +130,9 @@ public class DemoAIPlayer : DemoPlayer
                 yield return new WaitForSeconds(2.0f);
             }
         }
-
+        
         yield return new WaitForSeconds(2.0f);
-
+        /*
         var boardCreatures = new List<RuntimeCard>();
         foreach (var creature in GetBoardCreatures())
         {
@@ -219,7 +219,7 @@ public class DemoAIPlayer : DemoPlayer
 
     protected bool TryToPlayCard(RuntimeCard card)
     {
-        var availableMana = playerInfo.namedStats["Mana"].effectiveValue;
+        var availableMana = playerInfo.namedStats["Crystals"].effectiveValue;
         var libraryCard = GameManager.Instance.config.GetCard(card.cardId);
         var cost = libraryCard.costs.Find(x => x is PayResourceCost);
         if (cost != null)
