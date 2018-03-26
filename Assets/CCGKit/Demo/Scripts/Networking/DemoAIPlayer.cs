@@ -219,8 +219,36 @@ public class DemoAIPlayer : DemoPlayer
 
     protected bool TryToPlayCard(RuntimeCard card)
     {
-        var availableMana = playerInfo.namedStats["Crystals"].effectiveValue;
         var libraryCard = GameManager.Instance.config.GetCard(card.cardId);
+        //var availableMana = playerInfo.namedStats["Mana"].effectiveValue;
+        var availableMana = 0;
+        var gameConfig = GameManager.Instance.config;
+        //xin: to determin the availableMana type according to the cardset. 
+        foreach (var cardSet in gameConfig.cardSets)
+        {
+            foreach (var x in cardSet.cards)
+            {
+                if (x.name.Equals(libraryCard.name))
+                {
+                    switch (cardSet.name)
+                    {
+                        case "Weapon":
+                            availableMana = playerInfo.namedStats["Weapons"].effectiveValue;
+                            break;
+                        case "Crystal":
+                            availableMana = playerInfo.namedStats["Crystals"].effectiveValue;
+                            break;
+                        case "Brick":
+                            availableMana = playerInfo.namedStats["Bricks"].effectiveValue;
+                            break;
+                        default:
+                            break;
+                    }
+                    break;
+                }
+            }
+        }
+        
         var cost = libraryCard.costs.Find(x => x is PayResourceCost);
         if (cost != null)
         {
