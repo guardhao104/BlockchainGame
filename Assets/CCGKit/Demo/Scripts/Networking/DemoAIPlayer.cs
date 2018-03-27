@@ -127,7 +127,6 @@ public class DemoAIPlayer : DemoPlayer
         {
             if (TryToPlayCard(spell))
             {
-
                 yield return new WaitForSeconds(2.0f);
             }
         }
@@ -220,44 +219,19 @@ public class DemoAIPlayer : DemoPlayer
 
     protected bool TryToPlayCard(RuntimeCard card)
     {
+        //var availableMana = playerInfo.namedStats["Crystals"].effectiveValue;
         var libraryCard = GameManager.Instance.config.GetCard(card.cardId);
-        //var availableMana = playerInfo.namedStats["Mana"].effectiveValue;
-        var availableMana = 0;
-        var gameConfig = GameManager.Instance.config;
-        //xin: to determin the availableMana type according to the cardset. 
-        foreach (var cardSet in gameConfig.cardSets)
-        {
-            foreach (var x in cardSet.cards)
-            {
-                if (x.name.Equals(libraryCard.name))
-                {
-                    switch (cardSet.name)
-                    {
-                        case "Weapon":
-                            availableMana = playerInfo.namedStats["Weapons"].effectiveValue;
-                            break;
-                        case "Crystal":
-                            availableMana = playerInfo.namedStats["Crystals"].effectiveValue;
-                            break;
-                        case "Brick":
-                            availableMana = playerInfo.namedStats["Bricks"].effectiveValue;
-                            break;
-                        default:
-                            break;
-                    }
-                    break;
-                }
-            }
-        }
-        
         var cost = libraryCard.costs.Find(x => x is PayResourceCost);
+        var resourceCost = cost as PayResourceCost;
+        var availableResource = playerInfo.stats[resourceCost.statId].effectiveValue;
         if (cost != null)
         {
             var payResourceCost = cost as PayResourceCost;
             var manaCost = payResourceCost.value;
-            if (manaCost <= availableMana)
+            if (manaCost <= availableResource)
             {
                 var target = GetAbilityTarget(card);
+                /*
                 if (card.cardType.name == "Creature")
                 {
                     playerInfo.namedZones["Hand"].RemoveCard(card);
@@ -265,12 +239,15 @@ public class DemoAIPlayer : DemoPlayer
                     numTurnsOnBoard[card.instanceId] = 0;
                     PlayCreatureCard(card, target);
                 }
-                else if (card.cardType.name == "Spell")
+                else*/
+                if (card.cardType.name == "Spell")
                 {
+                    PlaySpellCard(card, target);
+                    /*
                     if (target != null)
                     {
                         PlaySpellCard(card, target);
-                    }
+                    }*/
                 }
                 return true;
             }
