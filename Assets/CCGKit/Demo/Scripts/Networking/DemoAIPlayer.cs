@@ -219,16 +219,19 @@ public class DemoAIPlayer : DemoPlayer
 
     protected bool TryToPlayCard(RuntimeCard card)
     {
-        var availableMana = playerInfo.namedStats["Crystals"].effectiveValue;
+        //var availableMana = playerInfo.namedStats["Crystals"].effectiveValue;
         var libraryCard = GameManager.Instance.config.GetCard(card.cardId);
         var cost = libraryCard.costs.Find(x => x is PayResourceCost);
+        var resourceCost = cost as PayResourceCost;
+        var availableResource = playerInfo.stats[resourceCost.statId].effectiveValue;
         if (cost != null)
         {
             var payResourceCost = cost as PayResourceCost;
             var manaCost = payResourceCost.value;
-            if (manaCost <= availableMana)
+            if (manaCost <= availableResource)
             {
                 var target = GetAbilityTarget(card);
+                /*
                 if (card.cardType.name == "Creature")
                 {
                     playerInfo.namedZones["Hand"].RemoveCard(card);
@@ -236,12 +239,15 @@ public class DemoAIPlayer : DemoPlayer
                     numTurnsOnBoard[card.instanceId] = 0;
                     PlayCreatureCard(card, target);
                 }
-                else if (card.cardType.name == "Spell")
+                else*/
+                if (card.cardType.name == "Spell")
                 {
+                    PlaySpellCard(card, target);
+                    /*
                     if (target != null)
                     {
                         PlaySpellCard(card, target);
-                    }
+                    }*/
                 }
                 return true;
             }
