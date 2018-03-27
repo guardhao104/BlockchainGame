@@ -127,6 +127,7 @@ public class DemoAIPlayer : DemoPlayer
         {
             if (TryToPlayCard(spell))
             {
+
                 yield return new WaitForSeconds(2.0f);
             }
         }
