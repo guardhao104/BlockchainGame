@@ -12,7 +12,7 @@
         {
             "originZoneId": 0,
             "destinationZoneId": 1,
-            "numCards": 8,
+            "numCards": 5,
             "name": "Move cards",
             "target": "AllPlayers",
             "$type": "CCGKit.MoveCardsAction"
@@ -68,18 +68,18 @@
             "$type": "CCGKit.PlayerStatEndGameCondition"
         },
         {
-            "zoneId": 0,
-            "op": "LessThanOrEqualTo",
-            "value": 0,
-            "type": "Loss",
-            "$type": "CCGKit.CardsInZoneEndGameCondition"
-        },
-        {
             "statId": 0,
             "op": "GreaterThanOrEqualTo",
             "value": 100,
             "type": "Win",
             "$type": "CCGKit.PlayerStatEndGameCondition"
+        },
+        {
+            "zoneId": 0,
+            "op": "LessThanOrEqualTo",
+            "value": 0,
+            "type": "Loss",
+            "$type": "CCGKit.CardsInZoneEndGameCondition"
         }
     ]
 }
