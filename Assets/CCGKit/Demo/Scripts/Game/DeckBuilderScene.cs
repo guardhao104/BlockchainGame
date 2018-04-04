@@ -51,6 +51,10 @@ public class DeckBuilderScene : BaseScene
 
     [SerializeField]
     private GameObject cardListItemPrefab;
+    [SerializeField]
+    private GameObject cardWeaponItemPrefab;
+    [SerializeField]
+    private GameObject cardBrickItemPrefab;
 
     [SerializeField]
     private TextMeshProUGUI numCardsText;
@@ -77,6 +81,8 @@ public class DeckBuilderScene : BaseScene
         Assert.IsNotNull(deckNameInputField);
         Assert.IsNotNull(cardListContent);
         Assert.IsNotNull(cardListItemPrefab);
+        Assert.IsNotNull(cardWeaponItemPrefab);
+        Assert.IsNotNull(cardBrickItemPrefab);
         Assert.IsNotNull(numCardsText);
     }
 
@@ -154,7 +160,7 @@ public class DeckBuilderScene : BaseScene
         foreach (var card in currentDeckButton.deck.cards)
         {
             var libraryCard = GameManager.Instance.config.GetCard(card.id);
-            var go = Instantiate(cardListItemPrefab) as GameObject;
+            var go = DeterminDeckIcon(libraryCard, GameManager.Instance.config);
             go.transform.SetParent(cardListContent.transform, false);
             go.GetComponent<CardListItem>().deckButton = currentDeckButton;
             go.GetComponent<CardListItem>().card = libraryCard;
@@ -212,36 +218,34 @@ public class DeckBuilderScene : BaseScene
             //var cardType = gameConfig.cardTypes.Find(x => x.id == card.cardTypeId);
 
 
-            
-            GameObject go = null;
-            foreach (var cardSet in gameConfig.cardSets)
-            {
-                foreach (var x in cardSet.cards)
-                {
-                    if (x.name.Equals(card.name))
-                    {
-                        switch(cardSet.name)
-                        {
-                            case "Weapon":
-                                go = Instantiate(WeaponCardViewPrefab as GameObject);
-                                break;
-                            case "Crystal":
-                                go = Instantiate(spellCardViewPrefab as GameObject);
-                                break;
-                            case "Brick":
-                                go = Instantiate(BrickCardViewPrefab as GameObject);
-                                break;
-                            default:
-                                go = Instantiate(spellCardViewPrefab as GameObject);
-                                break;
-                        }
-                        break;
-                    }
-                }
-            }
-            
 
-            
+            GameObject go = null;
+            go = DeterminIcon(card, gameConfig);
+            //foreach (var cardSet in gameConfig.cardSets)
+            //{
+            //    foreach (var x in cardSet.cards)
+            //    {
+            //        if (x.name.Equals(card.name))
+            //        {
+            //            switch(cardSet.name)
+            //            {
+            //                case "Weapon":
+            //                    go = Instantiate(WeaponCardViewPrefab as GameObject);
+            //                    break;
+            //                case "Crystal":
+            //                    go = Instantiate(spellCardViewPrefab as GameObject);
+            //                    break;
+            //                case "Brick":
+            //                    go = Instantiate(BrickCardViewPrefab as GameObject);
+            //                    break;
+            //                default:
+            //                    go = Instantiate(spellCardViewPrefab as GameObject);
+            //                    break;
+            //            }
+            //            break;
+            //        }
+            //    }
+            //}           
             /*
             GameObject go = null;
             if (cardType.name == "Creature")
@@ -394,4 +398,65 @@ public class DeckBuilderScene : BaseScene
         file.WriteLine(json);
         file.Close();
     }
+    public GameObject DeterminIcon(Card card, GameConfiguration gameConfig)
+    {
+        foreach (var cardSet in gameConfig.cardSets)
+        {
+            foreach (var x in cardSet.cards)
+            {
+                if (x.name.Equals(card.name))
+                {
+                    switch (cardSet.name)
+                    {
+                        case "Weapon":
+                            return Instantiate(WeaponCardViewPrefab as GameObject);
+                            
+                        case "Crystal":
+                            return Instantiate(spellCardViewPrefab as GameObject);
+                            
+                        case "Brick":
+                            return Instantiate(BrickCardViewPrefab as GameObject);
+                            
+                        default:
+                            return Instantiate(spellCardViewPrefab as GameObject);
+                            
+                    }
+                    
+                }
+            }
+        }
+        return Instantiate(spellCardViewPrefab as GameObject);
+    }
+
+    public GameObject DeterminDeckIcon(Card card, GameConfiguration gameConfig)
+    {
+        foreach (var cardSet in gameConfig.cardSets)
+        {
+            foreach (var x in cardSet.cards)
+            {
+                if (x.name.Equals(card.name))
+                {
+                    switch (cardSet.name)
+                    {
+                        case "Weapon":
+                            return Instantiate(cardWeaponItemPrefab as GameObject);
+
+                        case "Crystal":
+                            return Instantiate(cardListItemPrefab as GameObject);
+
+                        case "Brick":
+                            return Instantiate(cardBrickItemPrefab as GameObject);
+
+                        default:
+                            return Instantiate(spellCardViewPrefab as GameObject);
+
+                    }
+
+                }
+            }
+        }
+        return Instantiate(cardListItemPrefab as GameObject);
+    }
+
+
 }

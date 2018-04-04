@@ -3040,7 +3040,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0.000061035156}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &809150567
@@ -6439,6 +6439,10 @@ MonoBehaviour:
   cardListContent: {fileID: 809150565}
   cardListItemPrefab: {fileID: 1758323835122030, guid: ad3dcf829ffbf41cf8cc1a4e4987424d,
     type: 2}
+  cardWeaponItemPrefab: {fileID: 1155331550494560, guid: 149f45dd4a080c3469401bac3410b4ae,
+    type: 2}
+  cardBrickItemPrefab: {fileID: 1684085398918822, guid: 17f6024c6c5250f4c9c1f85343a3d179,
+    type: 2}
   numCardsText: {fileID: 128671226}
 --- !u!4 &1920282273
 Transform:
@@ -7021,7 +7025,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 796819983}
   m_HandleRect: {fileID: 796819982}
   m_Direction: 0
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
