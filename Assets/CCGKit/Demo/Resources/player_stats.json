@@ -19,8 +19,8 @@
     },
     {
         "name": "Workers",
-        "baseValue": 2,
-        "originalValue": 2,
+        "baseValue": 3,
+        "originalValue": 3,
         "minValue": 0,
         "maxValue": 10,
         "id": 2,
@@ -37,8 +37,8 @@
     },
     {
         "name": "Soldiers",
-        "baseValue": 2,
-        "originalValue": 2,
+        "baseValue": 3,
+        "originalValue": 3,
         "minValue": 0,
         "maxValue": 10,
         "id": 4,
@@ -55,8 +55,8 @@
     },
     {
         "name": "Magic",
-        "baseValue": 2,
-        "originalValue": 2,
+        "baseValue": 3,
+        "originalValue": 3,
         "minValue": 0,
         "maxValue": 10,
         "id": 6,

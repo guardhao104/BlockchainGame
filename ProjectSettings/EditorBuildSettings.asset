@@ -17,3 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/CCGKit/Demo/Scenes/Game.unity
     guid: c5f0e1bda8df04004829d31b8fc8f2ed
+  - enabled: 1
+    path: Assets/CCGKit/Demo/Scenes/Guide.unity
+    guid: 39159d227d758dd4f80137b7bca22c0f

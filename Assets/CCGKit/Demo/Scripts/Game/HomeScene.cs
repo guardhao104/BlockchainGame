@@ -101,6 +101,11 @@ public class HomeScene : BaseScene
         SceneManager.LoadScene("DeckBuilder");
     }
 
+    public void OnGuideButtonPressed()
+    {
+        SceneManager.LoadScene("Guide");
+    }
+
     public void OnQuitButtonPressed()
     {
         OpenPopup<PopupTwoButtons>("PopupTwoButtons", popup =>

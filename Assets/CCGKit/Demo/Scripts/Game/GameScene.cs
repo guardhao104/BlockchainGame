@@ -90,4 +90,9 @@ public class GameScene : BaseScene
     {
         chatPopup.Show();
     }
+
+    public void OnGuideButtonPressed()
+    {
+
+    }
 }
