@@ -129,6 +129,7 @@ public class DemoAIPlayer : DemoPlayer
             {
                 yield return new WaitForSeconds(2.0f);
             }
+            //yield return new WaitForSeconds(2.0f);
         }
         
         yield return new WaitForSeconds(2.0f);
