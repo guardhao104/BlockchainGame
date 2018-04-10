@@ -111,6 +111,30 @@ public class GameUI : MonoBehaviour
         Assert.IsNotNull(opponentCrystalsText);
     }
 
+    private IEnumerator textEffect(TextMeshPro text, int large_size, int new_value)
+    {
+        if (text.text == new_value.ToString())
+        {
+            yield return null;
+        }
+        else
+        {
+            text.text = new_value.ToString();
+            var size = text.fontSize;
+            for (int i = 0; i < large_size; i++)
+            {
+                text.fontSize = size + i;
+                yield return new WaitForSeconds(0.2f / large_size);
+            }
+            yield return new WaitForSeconds(0.6f);
+            for (int i = 0; i < large_size; i++)
+            {
+                text.fontSize = size + large_size - 1 - i;
+                yield return new WaitForSeconds(0.2f / large_size);
+            }
+        }
+    }
+
     public void SetPlayerActive(bool active)
     {
         playerActiveBackground.SetActive(active);
@@ -139,22 +163,22 @@ public class GameUI : MonoBehaviour
 
     public void SetPlayerCastle(int castle)
     {
-        playerCastleText.text = castle.ToString();
+        StartCoroutine(textEffect(playerCastleText, 4, castle));
     }
 
     public void SetOpponentCastle(int castle)
     {
-        opponentCastleText.text = castle.ToString();
+        StartCoroutine(textEffect(opponentCastleText, 4, castle));
     }
 
     public void SetPlayerDeckCards(int cards)
     {
-        playerDeckText.text = cards.ToString();
+        StartCoroutine(textEffect(playerDeckText, 3, cards));
     }
 
     public void SetPlayerHandCards(int cards)
     {
-        playerHandText.text = cards.ToString();
+        StartCoroutine(textEffect(playerHandText, 3, cards));
     }
 
     public void SetPlayerGraveyardCards(int cards)
@@ -164,12 +188,12 @@ public class GameUI : MonoBehaviour
 
     public void SetOpponentDeckCards(int cards)
     {
-        opponentDeckText.text = cards.ToString();
+        StartCoroutine(textEffect(opponentDeckText, 3, cards));
     }
 
     public void SetOpponentHandCards(int cards)
     {
-        opponentHandText.text = cards.ToString();
+        StartCoroutine(textEffect(opponentHandText, 3, cards));
     }
 
     public void SetOpponentGraveyardCards(int cards)
@@ -189,12 +213,12 @@ public class GameUI : MonoBehaviour
 
     public void SetPlayerDefense(int defense)
     {
-        playerDefenseText.text = defense.ToString();
+        StartCoroutine(textEffect(playerDefenseText, 5, defense));
     }
 
     public void SetOpponentDefense(int defense)
     {
-        opponentDefenseText.text = defense.ToString();
+        StartCoroutine(textEffect(opponentDefenseText, 5, defense));
     }
     /*
     public void SetPlayerGenhp(int genhp)
@@ -209,62 +233,62 @@ public class GameUI : MonoBehaviour
     */
     public void SetPlayerWorkers(int workers)
     {
-        playerWorkersText.text = workers.ToString();
+        StartCoroutine(textEffect(playerWorkersText, 5, workers));
     }
 
     public void SetOpponentWorkers(int workers)
     {
-        opponentWorkersText.text = workers.ToString();
+        StartCoroutine(textEffect(opponentWorkersText, 5, workers));
     }
 
     public void SetPlayerBricks(int bricks)
     {
-        playerBricksText.text = bricks.ToString();
+        StartCoroutine(textEffect(playerBricksText, 5, bricks));
     }
 
     public void SetOpponentBricks(int bricks)
     {
-        opponentBricksText.text = bricks.ToString();
+        StartCoroutine(textEffect(opponentBricksText, 5, bricks));
     }
 
     public void SetPlayerSoldiers(int soldiers)
     {
-        playerSoldiersText.text = soldiers.ToString();
+        StartCoroutine(textEffect(playerSoldiersText, 5, soldiers));
     }
 
     public void SetOpponentSoldiers(int soldiers)
     {
-        opponentSoldiersText.text = soldiers.ToString();
+        StartCoroutine(textEffect(opponentSoldiersText, 5, soldiers));
     }
 
     public void SetPlayerWeapon(int weapon)
     {
-        playerWeaponText.text = weapon.ToString();
+        StartCoroutine(textEffect(playerWeaponText, 5, weapon));
     }
 
     public void SetOpponentWeapon(int weapon)
     {
-        opponentWeaponText.text = weapon.ToString();
+        StartCoroutine(textEffect(opponentWeaponText, 5, weapon));
     }
 
     public void SetPlayerMagic(int magic)
     {
-        playerMagicText.text = magic.ToString();
+        StartCoroutine(textEffect(playerMagicText, 5, magic));
     }
 
     public void SetOpponentMagic(int magic)
     {
-        opponentMagicText.text = magic.ToString();
+        StartCoroutine(textEffect(opponentMagicText, 5, magic));
     }
 
     public void SetPlayerCrystals(int crystals)
     {
-        playerCrystalsText.text = crystals.ToString();
+        StartCoroutine(textEffect(playerCrystalsText, 5, crystals));
     }
 
     public void SetOpponentCrystals(int crystals)
     {
-        opponentCrystalsText.text = crystals.ToString();
+        StartCoroutine(textEffect(opponentCrystalsText, 5, crystals));
     }
 
     public void SetEndTurnButtonEnabled(bool enabled)

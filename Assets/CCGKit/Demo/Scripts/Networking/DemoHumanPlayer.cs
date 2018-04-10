@@ -211,7 +211,7 @@ public class DemoHumanPlayer : DemoPlayer
                 opponentGenhpStat = entry.Value;
             }
         }
-
+        
         castleStat.onValueChanged += (oldValue, newValue) =>
         {
             gameUI.SetPlayerCastle(castleStat.effectiveValue);
