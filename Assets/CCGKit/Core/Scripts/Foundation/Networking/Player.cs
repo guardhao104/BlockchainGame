@@ -1,4 +1,4 @@
-// Copyright (C) 2016-2017 David Pol. All rights reserved.
+﻿// Copyright (C) 2016-2017 David Pol. All rights reserved.
 // This code can only be used under the standard Unity Asset Store End User License Agreement,
 // a copy of which is available at http://unity3d.com/company/legal/as_terms.
 
@@ -170,7 +170,10 @@ namespace CCGKit
             }
             else
             {
-                msg.name = "Turing Machine";
+                string[] castlenames = { "Potala Palace", "Le Mont Saint-Michel", "Predjamski Castle",
+                    "Neuschwanstein Castle", "Matsumoto Castle", "Hunyad Castle", "Malbork Castle",
+                    "Palacio da Pena", "Löwenburg castle", "Prague Castle" };
+                msg.name = castlenames[Random.Range(0, 9)];
             }
             msg.isHuman = isHuman;
             msg.deck = msgDefaultDeck.ToArray();
