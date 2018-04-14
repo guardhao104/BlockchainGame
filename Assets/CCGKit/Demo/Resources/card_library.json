@@ -998,7 +998,7 @@
                 ],
                 "properties": [
                     {
-                        "value": "ADD 1 SOLDIER",
+                        "value": "ADD 1 BLACKSMITH",
                         "name": "Text",
                         "$type": "CCGKit.StringProperty"
                     },
@@ -2438,13 +2438,13 @@
                 "costs": [
                     {
                         "statId": 3,
-                        "value": 30,
+                        "value": 20,
                         "$type": "CCGKit.PayResourceCost"
                     }
                 ],
                 "properties": [
                     {
-                        "value": "ADD 1 BUILDER, 1 SOLDIER, AND 1 MAGE",
+                        "value": "ADD 1 BUILDER, 1 BLACKSMITH, AND 1 MAGE",
                         "name": "Text",
                         "$type": "CCGKit.StringProperty"
                     },
